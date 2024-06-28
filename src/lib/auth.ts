@@ -29,9 +29,9 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         const user = await authenticateUser(username, password);
   
         if (user) {
-          const { id, email, name } = user;
+          const { id, email, fullName } = user;
           // Any object returned will be saved in `user` property of the JWT
-          return { id: `${id}`, email, name } as User;
+          return { id: `${id}`, email, fullName } as User;
         } 
         return null;
       }
