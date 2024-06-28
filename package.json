@@ -43,6 +43,7 @@
     "@tanstack/react-table": "^8.17.3",
     "@tanstack/react-virtual": "^3.5.0",
     "@uploadthing/react": "^6.5.4",
+    "@vercel/postgres": "^0.9.0",
     "autoprefixer": "^10.4.19",
     "axios": "^1.6.8",
     "bcryptjs": "^2.4.3",
