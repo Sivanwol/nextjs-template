@@ -65,19 +65,20 @@ export async function getUserByUUID(id: string, isOutput: boolean = false) {
     }
     return res[0];
 }
-export async function insertUser(user: User) {
+export async function insertUser(user: any) {
+console.log(user);
     const { resultId } = (await db.insert(users).values({
-        externalId: user.id,
+        externalId: user.uuid,
         email: user.email,
-        fullName: user.name.first +'' + user.name.last,
-        username: user.username,
+        fullName: user.name,
+        username: user.userName,
         password:  generatePasswordHash(`${user.username}_1234`),
         gender: user.gender,
         phone: user.phone,
-        country: user.location.country,
-        city: user.location.city,
-        address: user.location.street,
-        thumbnail: user.picture.thumbnail
+        country: user.country,
+        city: user.city,
+        address: user.address,
+        thumbnail: user.thumbnail
     }).returning({ resultId: users.id}))[0];
     return resultId;
 }

@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta charSet="utf-8" /> s
+        <meta charSet="utf-8" /> 
         <meta name="viewport" content="width=device-width" />
       </head>
       <body className={inter.className}>
@@ -36,7 +36,7 @@ export default function RootLayout({
                 height: "44px",
               }}
             >
-              <div id="lColumn">&nbsp;</div>
+              <div id="lColumn">By Sivan Wolberg</div>
               <div
                 id="rColumn"
                 className="flex items-center gap-10 overflow-hidden text-sm font-semibold transition-all duration-200"

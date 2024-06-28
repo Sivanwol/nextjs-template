@@ -1,8 +1,10 @@
-import { NextApiRequest, NextApiResponse } from 'next';
+import { NextRequest,NextResponse } from "next/server";
 import Joi from "joi";
-import validate from '@app/lib/middlewares/validation';
 import { getUser, insertUser } from '@app/models/users';
 
+type ErrorResponse = {
+    message: any;
+}
 type ResponseData = {
     externalId: string,
     email: string,
@@ -15,28 +17,29 @@ type ResponseData = {
     address: string,
     thumbnail: string
 }
-const handler = async function handler(
-    req: NextApiRequest,
-    res: NextApiResponse<ResponseData>
-) {
-    if (req.method === 'POST') {
-        const resultId  = await insertUser(req.body);
-        const user = await getUser(resultId, true) as ResponseData;
-        res.status(200).json(user);
-    } else {
-        res.status(405).end()
-    }
-}
+
 const schema = Joi.object({
+    uuid: Joi.string().required(),
     userName: Joi.string().min(4).max(100).required(),
     email: Joi.string().email().max(550).required(),
     name: Joi.string().min(4).max(100).required(),
-    password: Joi.string().min(6).max(30).required(),
     phone: Joi.string().max(20).required(),
-    country: Joi.string().max(50).required(),
+    country: Joi.string().min(2).max(50).required(),
     city: Joi.string().max(100).required(),
     address: Joi.string().max(200).required(),
     thumbnail: Joi.string().max(500).required(),
     gender: Joi.string().max(10).required(),
-  });
-export default validate({ body: schema }, handler);
+});
+export async function POST(request: NextRequest) {
+    try {
+        const data = await request.json();
+        console.log(data);
+        await schema.validateAsync(data);
+        const resultId = await insertUser(data);
+        const user = await getUser(resultId, true) as ResponseData;
+        return NextResponse.json(user);
+    } catch (error) {
+        console.error(error);
+        return NextResponse.json({ message: error }, { status: 400 });
+    }
+}

@@ -1,4 +1,5 @@
 'use client'
+import axios from "axios";
 import { useMemo, useState } from "react";
 import {
   createColumnHelper,
@@ -29,7 +30,7 @@ export default function Users() {
   const columns = [
     columnHelper.accessor("id", {
       header: () => "#",
-      cell: (info) => <Link href={`/user/${info.getValue()}`}>See Profile</Link>,
+      cell: (info) => <Link href={`/users/${info.getValue()}`}>See Profile</Link>,
     }),
     columnHelper.accessor("thumbnail", {
       cell: (info) => (
@@ -57,8 +58,29 @@ export default function Users() {
       cell: (info) => <UserTableActionItem id={info.row.getValue('id')} onSave={onSave} />,
     }),
   ];
-  const onSave = (id: string) => {
-    console.log('save',id);
+  const onSave = async (id: string) => {
+    const user = users.find((user) => user.id === id);
+    const saveObj = {
+      userName: user?.username,
+      email: user?.email,
+      name: user?.name,
+      phone: user?.phone,
+      country: user?.location.country,
+      city: user?.location.city,
+      address: user?.location.street,
+      thumbnail: user?.picture.thumbnail,
+      gender: user?.gender,
+    }
+    console.log('save',id, user,saveObj);
+    debugger;
+    const res = await axios.post(
+      `${process.env.NEXT_PUBLIC_API_URL}/users/save`, saveObj
+    );
+    
+    if (res.status === 200) {
+      alert('saved');
+      window.location.reload();
+    }
   }
   let data: UserColumnDef[] = [];
   if (users.length > 0) {
