@@ -68,6 +68,7 @@ export default function Users() {
       email: user.email,
       phone: user.phone,
       country: user.location.country,
+      actions: ''
     }));
   }
   
