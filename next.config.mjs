@@ -14,6 +14,9 @@ const nextConfig = {
         defaultLocale: 'en',
         localeDetection: false
     },
+    experimental: {
+        missingSuspenseWithCSRBailout: false,
+    },
 
     transpilePackages: ['lucide-react'],
     reactStrictMode: true,

@@ -22,7 +22,7 @@ export default function UsersHistory() {
   const { history } = useUserStore((state) => state);
   const columnHelper = createColumnHelper<UserColumnDef>();
   const columns = [
-    columnHelper.accessor("id", {    }),
+    columnHelper.accessor("id", {}),
     columnHelper.accessor("thumbnail", {
       cell: (info) => (
         <Link href={`/users/${info.row.getValue("id")}`}>
