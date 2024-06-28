@@ -53,19 +53,19 @@ export default function GetUser({ params }: { params: { uuid: string } }) {
                 errors={errors}
                 profile={profile}
               />
+              <Button type="submit" disabled={!editMode} variant="secondary">
+                Save
+              </Button>
+              <Button
+                type="button"
+                onClick={() => {
+                  setEditMode(!editMode);
+                }}
+                variant="secondary"
+              >
+                {editMode ? "Cancel Edit" : "Enter Edit"}
+              </Button>
             </Card.Text>
-            <Button type="submit" disabled={!editMode} variant="secondary">
-              Save
-            </Button>
-            <Button
-              type="button"
-              onClick={() => {
-                setEditMode(!editMode);
-              }}
-              variant="secondary"
-            >
-              {editMode ? "Cancel Edit" : "Enter Edit"}
-            </Button>
           </Card.Body>
         </Card>
       </form>
