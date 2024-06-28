@@ -65,11 +65,19 @@ export async function getUserByUUID(id: string, isOutput: boolean = false) {
     }
     return res[0];
 }
+export async function updateUser(userId: string, user:any) {
+    console.log(user);
+    await db.update(users).set({
+        title: user.title,
+        fullName: user.name,
+    }).where(eq(users.externalId, userId));
+}
 export async function insertUser(user: any) {
-console.log(user);
+    console.log(user);
     const { resultId } = (await db.insert(users).values({
         externalId: user.uuid,
         email: user.email,
+        title: user.title,
         fullName: user.name,
         username: user.userName,
         password:  generatePasswordHash(`${user.username}_1234`),

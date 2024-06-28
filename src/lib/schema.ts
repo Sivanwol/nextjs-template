@@ -6,6 +6,7 @@ export const users = pgTable("users", {
     gender: varchar("gender", { length: 10 }),
     username: varchar("name", { length: 50 }),
     password: varchar("password", { length: 100 }),
+    title: varchar("title", { length: 100 }),
     fullName: varchar("full_name", { length: 100 }),
     email: varchar("email", { length: 550 }),
     phone: varchar("mobile", { length: 20 }),

@@ -8,7 +8,10 @@ export type User = {
         last: string;
     };
     location: {
-        street: string;
+        street: {
+            name: string;
+            number: number;
+        };
         country: string;
         city: string;
         state: string;
@@ -28,6 +31,7 @@ export type UserResponse = {
     externalId: string,
     gender: string,
     username: string,
+    title: string,
     fullName: string,
     email: string,
     phone: string,

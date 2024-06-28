@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import "@radix-ui/themes/styles.css";
-import { Theme } from "@radix-ui/themes";
+import { Link, Theme } from "@radix-ui/themes";
 import HeaderBar from "@app/components/headerBar";
 import { AxiomWebVitals } from "next-axiom";
 import { UserProvider } from "@app/lib/state/providers/user-store-provider";
@@ -36,12 +36,17 @@ export default function RootLayout({
                 height: "44px",
               }}
             >
-              <div id="lColumn">By Sivan Wolberg</div>
+              <div id="lColumn" 
+                  className="text-white hover:text-indigo-200">By Sivan Wolberg</div>
               <div
                 id="rColumn"
                 className="flex items-center gap-10 overflow-hidden text-sm font-semibold transition-all duration-200"
                 style={{ height: " 20px" }}
               >
+                <Link
+                  className="text-white hover:text-indigo-200 cursor-pointer" href="/users">User List</Link>
+                <Link
+                  className="text-white hover:text-indigo-200 cursor-pointer" href="/users/history">History</Link>
                 <a
                   href="https://github.com/Sivanwol/core-micro-fw"
                   target="_blank"

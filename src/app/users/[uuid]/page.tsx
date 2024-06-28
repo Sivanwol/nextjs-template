@@ -1,35 +1,18 @@
+'use client'
 import { Badge, Card, ListGroup } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Button } from "@app/components/ui/button";
 import { useUserStore } from "@app/lib/state/providers/user-store-provider";
 import { useMemo, useState } from "react";
-import { useRouter } from "next/router";
+import { useRouter } from 'next/navigation'
 import useUserProfile from "@app/lib/hooks/useUserProfile";
-export type GetUserProps = {
-    id: string;
-};
-export default function GetUser({ ...props }: GetUserProps) {
-    useUserProfile({ id: props.id });
+export default function GetUser({ params }: { params: { uuid: string } }) {
     const router = useRouter();
+    console.log('props', params.uuid);
+    useUserProfile({ id: params.uuid });
     const [userProfileLoading, setUserProfileLoading] = useState(true);
     const [userProfileLoadingError, seUserProfileLoadingError] = useState(false);
     const { profile } = useUserStore((state) => state);
-    useMemo(() => {
-        if (
-            profile === null ||
-            userProfileLoadingError ||
-            profile.externalId !== props.id
-        ) {
-            router.replace(`/users`);
-        }
-        setUserProfileLoading(true);
-    }, [
-        profile,
-        props.id,
-        router,
-        setUserProfileLoading,
-        userProfileLoadingError,
-    ]);
     return (
         <div className="p-2">
             <Card style={{ width: "18rem" }}>
@@ -55,8 +38,6 @@ export default function GetUser({ ...props }: GetUserProps) {
                             </ListGroup.Item>
                         </ListGroup>
                     </Card.Text>
-                    <Button>Go somewhere</Button>
-                    <Button variant="secondary">Back for User list</Button>
                 </Card.Body>
             </Card>
         </div>

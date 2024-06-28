@@ -2,9 +2,6 @@ import { NextRequest,NextResponse } from "next/server";
 import Joi from "joi";
 import { getUser, insertUser } from '@app/models/users';
 
-type ErrorResponse = {
-    message: any;
-}
 type ResponseData = {
     externalId: string,
     email: string,
@@ -21,6 +18,7 @@ type ResponseData = {
 const schema = Joi.object({
     uuid: Joi.string().required(),
     userName: Joi.string().min(4).max(100).required(),
+    title: Joi.string().min(2).max(100).required(),
     email: Joi.string().email().max(550).required(),
     name: Joi.string().min(4).max(100).required(),
     phone: Joi.string().max(20).required(),

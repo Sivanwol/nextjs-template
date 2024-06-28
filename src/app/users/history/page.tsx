@@ -7,9 +7,7 @@ import {
   getCoreRowModel,
   useReactTable,
 } from "@tanstack/react-table";
-import { User, UserColumnDef } from "../../lib/schema/user";
 import Image from "next/image";
-import useUserData from "@app/lib/hooks/useUserData";
 import { useUserStore } from "@app/lib/state/providers/user-store-provider";
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -17,22 +15,19 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Table as BTable } from "react-bootstrap";
 import Link from "next/link";
 import UserTableActionItem from "@app/components/userTableActionItem";
-export default function Users() {
-  const [userLoading, setUserLoading] = useState(false);
-  const [userLoadingError, seUserLoadingError] = useState(false);
-  useUserData();
-  const { users } = useUserStore((state) => state);
-  useMemo(() => {
-    if (users.length === 0) {
-      setUserLoading(true);
-    }
-  }, [users]);
+import { UserColumnDef, UserResponse } from "@app/lib/schema/user";
+import useUserHistoryData from "@app/lib/hooks/useUserHistoryData";
+export default function UsersHistory() {
+  useUserHistoryData();
+  const { history } = useUserStore((state) => state);
   const columnHelper = createColumnHelper<UserColumnDef>();
   const columns = [
     columnHelper.accessor("id", {    }),
     columnHelper.accessor("thumbnail", {
       cell: (info) => (
-        <Image src={info.getValue()} height={50} width={50} alt="User" />
+        <Link href={`/users/${info.row.getValue("id")}`}>
+          <Image src={info.getValue()} height={50} width={50} alt="User" />
+        </Link>
       ),
     }),
     columnHelper.accessor("title", {
@@ -51,57 +46,45 @@ export default function Users() {
       cell: (info) => info.getValue(),
     }),
     columnHelper.accessor("actions", {
-      cell: (info) => (
-        <UserTableActionItem id={info.row.getValue("id")} onSave={onSave} />
-      ),
+      cell: (info) => {
+      console.log('info.row', info.row.getValue("id"));
+      return (
+        <UserTableActionItem id={info.row.getValue("id")} onDelete={onDelete} />
+      )
+      },
     }),
   ];
-  const onSave = async (id: string) => {
-    const user = users.find((user) => user.id === id);
-    const saveObj = {
-      uuid: user?.id,
-      userName: user?.username,
-      title: user?.name.title,
-      email: user?.email,
-      name: `${user?.name.first} ${user?.name.last}`,
-      phone: user?.phone,
-      country: user?.location.country,
-      city: user?.location.city,
-      address: `${user?.location.street.name} ${user?.location.street.number}`,
-      thumbnail: user?.picture.thumbnail,
-      gender: user?.gender,
-    };
-    console.log("save", id, user, saveObj);
-    const res = await axios.post(
-      `${process.env.NEXT_PUBLIC_API_URL}/users/save`,
-      saveObj
+  const onDelete = async (id: string) => {
+    console.log("delete", id);
+    const res = await axios.delete(
+      `${process.env.NEXT_PUBLIC_API_URL}/users/${id}`
     );
-
     if (res.status === 200) {
-      alert("saved");
+      alert("deleted");
       window.location.reload();
     }
   };
   let data: UserColumnDef[] = [];
   useMemo(() => {
-    if (users.length > 0) {
+  
+    if (history.length > 0) {
       // eslint-disable-next-line react-hooks/exhaustive-deps
-      data = users.map(
-        (user: User) =>
+      data = history.map(
+        (user: UserResponse) =>
           ({
-            id: user.id,
-            thumbnail: user.picture.thumbnail,
-            title: user.name.title,
-            name: `${user.name.first} ${user.name.last}`,
+            id: user.externalId,
+            title: user.title,
+            thumbnail: user.thumbnail,
+            name: user.fullName,
             email: user.email,
             phone: user.phone,
-            country: user.location.country,
+            country: user.country,
             actions: "",
           } as UserColumnDef)
       );
       console.log("data", data);
     }
-  }, [users, data]);
+  }, [history, data]);
 
   const table = useReactTable({
     data,
@@ -111,7 +94,7 @@ export default function Users() {
     autoResetExpanded: false,
     initialState: {
       columnVisibility: { id: false}
-    } 
+    }
   });
   return (
     <div className="p-2">
