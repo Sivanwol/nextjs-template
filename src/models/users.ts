@@ -55,6 +55,16 @@ export async function getUser(id: number, isOutput: boolean = false) {
     }
     return res[0];
 }
+export async function getUserByUUID(id: string, isOutput: boolean = false) {
+    const res = await db.select().from(users).where(eq(users.externalId, id)).limit(1);
+    if (res.length === 0) {
+        return null;
+    }
+    if (isOutput) {
+        res[0].password = null;
+    }
+    return res[0];
+}
 export async function insertUser(user: User) {
     const { resultId } = (await db.insert(users).values({
         externalId: user.id,

@@ -33,7 +33,9 @@ export default function Users() {
     }),
     columnHelper.accessor("thumbnail", {
       cell: (info) => (
-        <Image src={info.getValue()} height={50} width={50} alt="User" />
+        <Link href={`/users/${info.row.getValue('id')}/get`}>
+          <Image src={info.getValue()} height={50} width={50} alt="User" />
+        </Link>
       ),
     }),
     columnHelper.accessor("title", {

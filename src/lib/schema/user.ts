@@ -23,7 +23,19 @@ export type User = {
         thumbnail: string;
     };
 }
-
+export type UserResponse = {
+    id: number,
+    externalId: string,
+    gender: string,
+    username: string,
+    fullName: string,
+    email: string,
+    phone: string,
+    country: string,
+    city: string,
+    address: string,
+    thumbnail: string,
+}
 
 export type UserColumnDef = {
     id: string,
