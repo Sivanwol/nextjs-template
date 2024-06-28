@@ -66,7 +66,7 @@ export async function getUserByUUID(id: string, isOutput: boolean = false) {
     return res[0];
 }
 export async function updateUser(userId: string, user:any) {
-    console.log(user);
+    console.log("updateUser",user);
     await db.update(users).set({
         title: user.title,
         fullName: user.name,

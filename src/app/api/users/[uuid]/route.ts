@@ -39,15 +39,16 @@ export async function GET(request: NextRequest,
     });
 }
 
-export async function POST(request: NextRequest,
+export async function PUT(request: NextRequest,
     { params }: { params: { uuid: string } }) {
     try {
+        const data = await request.json();
+        await schema.validateAsync(data);
         const user = await getUserByUUID(params.uuid, true) as UserData;
-        await schema.validateAsync(user);
         if (user === null) {
             return NextResponse.json({ menubar: 'User not found' }, { status: 404 });
         }
-        await updateUser(params.uuid, user);
+        await updateUser(params.uuid, data);
         return NextResponse.json({
             user,
         });
