@@ -12,9 +12,11 @@ export default function useUserHistoryData() {
   const { updateUsersHistory } = useUserStore((state) => state);
   useEffect(() => {
     const fetchData = async () => {
-    console.log('fetchData');
+      console.log("fetchData");
       if (userHistoryLoading) {
-        const res = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/users/history`);
+        const res = await axios.get(
+          `${process.env.NEXT_PUBLIC_API_URL}/users/history`,
+        );
         updateUsersHistory(res.data.users);
         setUserHistoryLoading(false);
       }
@@ -23,7 +25,7 @@ export default function useUserHistoryData() {
     const result = fetchData()
       // make sure to catch any error
       .catch((err) => {
-        console.error(err)
+        console.error(err);
         setUserHistoryLoading(false);
         seUserHistoryLoadingError(true);
       });

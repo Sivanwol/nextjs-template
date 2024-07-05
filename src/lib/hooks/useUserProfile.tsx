@@ -17,7 +17,7 @@ export default function useUserProfile({ ...props }: useUserProfileProps) {
     const fetchData = async () => {
       if (userProfileLoading && profile === null) {
         const res = await axios.get(
-          `${process.env.NEXT_PUBLIC_API_URL}/users/${props.id}`
+          `${process.env.NEXT_PUBLIC_API_URL}/users/${props.id}`,
         );
         setProfile(res.data.user);
         setUserProfileLoading(false);

@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta charSet="utf-8" /> 
+        <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width" />
       </head>
       <body className={inter.className}>
@@ -36,17 +36,26 @@ export default function RootLayout({
                 height: "44px",
               }}
             >
-              <div id="lColumn" 
-                  className="text-white hover:text-indigo-200">By Sivan Wolberg</div>
+              <div id="lColumn" className="text-white hover:text-indigo-200">
+                By Sivan Wolberg
+              </div>
               <div
                 id="rColumn"
                 className="flex items-center gap-10 overflow-hidden text-sm font-semibold transition-all duration-200"
                 style={{ height: " 20px" }}
               >
                 <Link
-                  className="text-white hover:text-indigo-200 cursor-pointer" href="/users">User List</Link>
+                  className="text-white hover:text-indigo-200 cursor-pointer"
+                  href="/users"
+                >
+                  User List
+                </Link>
                 <Link
-                  className="text-white hover:text-indigo-200 cursor-pointer" href="/users/history">History</Link>
+                  className="text-white hover:text-indigo-200 cursor-pointer"
+                  href="/users/history"
+                >
+                  History
+                </Link>
                 <a
                   href="https://github.com/Sivanwol/core-micro-fw"
                   target="_blank"
