@@ -1,5 +1,4 @@
-
 export interface ProfileFormValues {
-    fullName: string;
-    title: string;
+  fullName: string;
+  title: string;
 }

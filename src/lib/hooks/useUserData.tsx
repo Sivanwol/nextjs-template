@@ -29,7 +29,7 @@ export default function useUserData() {
     const result = fetchData()
       // make sure to catch any error
       .catch((err) => {
-        console.error(err)
+        console.error(err);
         setUserLoading(false);
         seUserLoadingError(true);
       });

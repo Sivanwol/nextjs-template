@@ -1,6 +1,6 @@
-import { authenticateUser, hasUserWithEmail } from '@app/models/users';
-import NextAuth, { User } from 'next-auth';
-import CredentialsProvider from 'next-auth/providers/credentials';
+import { authenticateUser, hasUserWithEmail } from "@app/models/users";
+import NextAuth, { User } from "next-auth";
+import CredentialsProvider from "next-auth/providers/credentials";
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
   providers: [
@@ -13,31 +13,31 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       // You can pass any HTML attribute to the <input> tag through the object.
       credentials: {
         username: { label: "Username", type: "text", placeholder: "jsmith" },
-        password: { label: "Password", type: "password" }
+        password: { label: "Password", type: "password" },
       },
       async authorize(credentials, req) {
         const { username, password } = credentials as {
-          username: string
-          password: string
+          username: string;
+          password: string;
         };
         if (username === "" && password === "") {
           return null;
         }
-        if (!await hasUserWithEmail(username)) {
+        if (!(await hasUserWithEmail(username))) {
           return null;
         }
         const user = await authenticateUser(username, password);
-  
+
         if (user) {
           const { id, email, fullName } = user;
           // Any object returned will be saved in `user` property of the JWT
           return { id: `${id}`, email, fullName } as User;
-        } 
+        }
         return null;
-      }
+      },
     }),
-    ],
-    pages: {
-      signIn: "sign-in/", //sigin page
-    }
+  ],
+  pages: {
+    signIn: "sign-in/", //sigin page
+  },
 });

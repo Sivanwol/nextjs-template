@@ -31,7 +31,8 @@ export default function GetUser({ params }: { params: { uuid: string } }) {
     console.log("update", uuid);
 
     const res = await axios.put(
-      `${process.env.NEXT_PUBLIC_API_URL}/users/${params.uuid}`, sentObj
+      `${process.env.NEXT_PUBLIC_API_URL}/users/${params.uuid}`,
+      sentObj,
     );
     if (res.status === 200) {
       alert("updated successfully!");

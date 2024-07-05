@@ -28,7 +28,7 @@ export default function ProfileInfo({ ...props }: ProfileInfoProp) {
               errors,
               "fullName",
               "Full Name",
-              profile?.fullName || ""
+              profile?.fullName || "",
             )
           : showNormalMode("Full Name", profile?.fullName || "")}
       </ListGroup.Item>
@@ -59,7 +59,7 @@ function showEditField(
   errors: FieldErrors<ProfileFormValues>,
   fieldId: keyof ProfileFormValues,
   fieldName: string,
-  value: string
+  value: string,
 ) {
   return (
     <>

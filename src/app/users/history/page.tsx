@@ -47,17 +47,20 @@ export default function UsersHistory() {
     }),
     columnHelper.accessor("actions", {
       cell: (info) => {
-      console.log('info.row', info.row.getValue("id"));
-      return (
-        <UserTableActionItem id={info.row.getValue("id")} onDelete={onDelete} />
-      )
+        console.log("info.row", info.row.getValue("id"));
+        return (
+          <UserTableActionItem
+            id={info.row.getValue("id")}
+            onDelete={onDelete}
+          />
+        );
       },
     }),
   ];
   const onDelete = async (id: string) => {
     console.log("delete", id);
     const res = await axios.delete(
-      `${process.env.NEXT_PUBLIC_API_URL}/users/${id}`
+      `${process.env.NEXT_PUBLIC_API_URL}/users/${id}`,
     );
     if (res.status === 200) {
       alert("deleted");
@@ -66,7 +69,6 @@ export default function UsersHistory() {
   };
   let data: UserColumnDef[] = [];
   useMemo(() => {
-  
     if (history.length > 0) {
       // eslint-disable-next-line react-hooks/exhaustive-deps
       data = history.map(
@@ -80,7 +82,7 @@ export default function UsersHistory() {
             phone: user.phone,
             country: user.country,
             actions: "",
-          } as UserColumnDef)
+          }) as UserColumnDef,
       );
       console.log("data", data);
     }
@@ -93,8 +95,8 @@ export default function UsersHistory() {
     autoResetPageIndex: false,
     autoResetExpanded: false,
     initialState: {
-      columnVisibility: { id: false}
-    }
+      columnVisibility: { id: false },
+    },
   });
   return (
     <div className="p-2">
@@ -108,7 +110,7 @@ export default function UsersHistory() {
                     ? null
                     : flexRender(
                         header.column.columnDef.header,
-                        header.getContext()
+                        header.getContext(),
                       )}
                 </th>
               ))}
@@ -135,7 +137,7 @@ export default function UsersHistory() {
                     ? null
                     : flexRender(
                         header.column.columnDef.footer,
-                        header.getContext()
+                        header.getContext(),
                       )}
                 </th>
               ))}

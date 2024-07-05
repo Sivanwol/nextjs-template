@@ -29,7 +29,7 @@ export default function Users() {
   }, [users]);
   const columnHelper = createColumnHelper<UserColumnDef>();
   const columns = [
-    columnHelper.accessor("id", {    }),
+    columnHelper.accessor("id", {}),
     columnHelper.accessor("thumbnail", {
       cell: (info) => (
         <Image src={info.getValue()} height={50} width={50} alt="User" />
@@ -74,7 +74,7 @@ export default function Users() {
     console.log("save", id, user, saveObj);
     const res = await axios.post(
       `${process.env.NEXT_PUBLIC_API_URL}/users/save`,
-      saveObj
+      saveObj,
     );
 
     if (res.status === 200) {
@@ -97,7 +97,7 @@ export default function Users() {
             phone: user.phone,
             country: user.location.country,
             actions: "",
-          } as UserColumnDef)
+          }) as UserColumnDef,
       );
       console.log("data", data);
     }
@@ -110,8 +110,8 @@ export default function Users() {
     autoResetPageIndex: false,
     autoResetExpanded: false,
     initialState: {
-      columnVisibility: { id: false}
-    } 
+      columnVisibility: { id: false },
+    },
   });
   return (
     <div className="p-2">
@@ -125,7 +125,7 @@ export default function Users() {
                     ? null
                     : flexRender(
                         header.column.columnDef.header,
-                        header.getContext()
+                        header.getContext(),
                       )}
                 </th>
               ))}
@@ -152,7 +152,7 @@ export default function Users() {
                     ? null
                     : flexRender(
                         header.column.columnDef.footer,
-                        header.getContext()
+                        header.getContext(),
                       )}
                 </th>
               ))}
