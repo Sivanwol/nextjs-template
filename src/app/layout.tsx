@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import "@radix-ui/themes/styles.css";
@@ -72,6 +73,7 @@ export default function RootLayout({
           </div>
         </Theme>
         <AxiomWebVitals />
+        <Analytics />
       </body>
     </html>
   );
