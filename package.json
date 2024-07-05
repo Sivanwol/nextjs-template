@@ -4,11 +4,12 @@
   "private": true,
   "license": "private",
   "scripts": {
-    "dev": "next dev --turbo",
+    "dev": "NEXT_OTEL_VERBOSE=1 && next dev --turbo",
     "generate": "drizzle-kit generate",
     "migrate": "drizzle-kit migrate",
     "build": "next build",
     "start": "next start",
+    "start:monitor": "NEXT_OTEL_VERBOSE=1 next start",
     "lint": "next lint"
   },
   "dependencies": {
@@ -22,6 +23,7 @@
     "@hookform/resolvers": "^3.6.0",
     "@libsql/client": "^0.7.0",
     "@neondatabase/serverless": "^0.9.3",
+    "@opentelemetry/api": "^1.9.0",
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-alert-dialog": "^1.0.5",
     "@radix-ui/react-avatar": "^1.0.4",
@@ -43,6 +45,9 @@
     "@tanstack/react-table": "^8.17.3",
     "@tanstack/react-virtual": "^3.5.0",
     "@uploadthing/react": "^6.5.4",
+    "@vercel/blob": "^0.23.4",
+    "@vercel/edge-config": "^1.2.0",
+    "@vercel/otel": "^1.9.1",
     "@vercel/postgres": "^0.9.0",
     "autoprefixer": "^10.4.19",
     "axios": "^1.6.8",
@@ -73,7 +78,7 @@
     "server-only": "^0.0.1",
     "sharp": "^0.33.4",
     "uploadthing": "^6.10.4",
-    "uuid": "^9.0.1",
+    "uuid": "^10.0.0",
     "zod": "^3.23.8",
     "zukeeper": "^1.0.2",
     "zustand": "^4.5.2"

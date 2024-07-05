@@ -18,6 +18,9 @@ const nextConfig = {
         missingSuspenseWithCSRBailout: false,
     },
 
+    experimental: {
+        instrumentationHook: true,
+    },
     transpilePackages: ['lucide-react'],
     reactStrictMode: true,
     images: {
