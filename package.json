@@ -14,7 +14,8 @@
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,md,mdx,css,yaml,yml}\"",
     "check": "prettier --check \"**/*.{ts,tsx,js,jsx,md,mdx,css,yaml,yml}\"",
     "lint": "next lint",
-    "prepare": "husky"
+    "prepare": "husky",
+    "analyze": "ANALYZE=true yarn build"
   },
   "dependencies": {
     "@auth/drizzle-adapter": "^1.1.0",

@@ -1,4 +1,4 @@
-{
+module.exports = {
   "locales": ["en", "he"],
   "defaultLocale": "en",
   "pages": {
