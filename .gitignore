@@ -38,3 +38,4 @@ next-env.d.ts
 # ENV Files
 .env*
 !.env.example
+*storybook.log
