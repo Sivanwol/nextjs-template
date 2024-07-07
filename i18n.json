@@ -1,9 +1,9 @@
 {
-  "locales": ["en", "ca", "es"],
+  "locales": ["en", "he"],
   "defaultLocale": "en",
   "pages": {
-    "*": ["common"],
-    "/": ["home"],
+    "*": ["common", "menu"],
+    "/": ["home", "menu"],
     "/sign-in": ["sign-in"]
   }
 }
