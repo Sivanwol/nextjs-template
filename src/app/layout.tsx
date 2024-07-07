@@ -22,7 +22,7 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const { lang } = useTranslation('common');
+  const { lang } = useTranslation("common");
   const isRTL = lang === "ar" || lang === "he";
 
   return (
