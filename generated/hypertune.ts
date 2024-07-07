@@ -4,12 +4,30 @@ import * as sdk from "hypertune";
 
 export const queryCode = `query FullQuery{root{test exampleFlag}}`;
 
-export const query = {"Query":{"objectTypeName":"Query","selection":{"root":{"fieldArguments":{"__isPartialObject__":true},"fieldQuery":{"Root":{"objectTypeName":"Root","selection":{"test":{"fieldArguments":{},"fieldQuery":null},"exampleFlag":{"fieldArguments":{},"fieldQuery":null}}}}}}}};
+export const query = {
+  Query: {
+    objectTypeName: "Query",
+    selection: {
+      root: {
+        fieldArguments: { __isPartialObject__: true },
+        fieldQuery: {
+          Root: {
+            objectTypeName: "Root",
+            selection: {
+              test: { fieldArguments: {}, fieldQuery: null },
+              exampleFlag: { fieldArguments: {}, fieldQuery: null },
+            },
+          },
+        },
+      },
+    },
+  },
+};
 
 function mergeQueryAndArgs(
   query: sdk.Query<sdk.ObjectValueWithVariables>,
   queryArgs: sdk.ObjectValueWithVariables | null,
-  unwrapObjectArgs = false
+  unwrapObjectArgs = false,
 ): sdk.Query<sdk.ObjectValueWithVariables> {
   return Object.fromEntries(
     Object.entries(query).map(([objectTypeName, fragment]) => {
@@ -48,84 +66,98 @@ function mergeQueryAndArgs(
                       : null,
                   },
                 ];
-              }
-            )
+              },
+            ),
           ),
         },
       ];
-    })
+    }),
   );
 }
-  
+
 /**
  * @deprecated use '@vercel/flags/providers/hypertune' package instead.
  */
-export const vercelFlagDefinitions = {"test":{"options":[{"label":"Off","value":false},{"label":"On","value":true}],"origin":"https://app.hypertune.com/projects/3579/main/draft/logic?selected_field_path=root%3Etest"},"exampleFlag":{"options":[{"label":"Off","value":false},{"label":"On","value":true}],"origin":"https://app.hypertune.com/projects/3579/main/draft/logic?selected_field_path=root%3EexampleFlag"}};
+export const vercelFlagDefinitions = {
+  test: {
+    options: [
+      { label: "Off", value: false },
+      { label: "On", value: true },
+    ],
+    origin:
+      "https://app.hypertune.com/projects/3579/main/draft/logic?selected_field_path=root%3Etest",
+  },
+  exampleFlag: {
+    options: [
+      { label: "Off", value: false },
+      { label: "On", value: true },
+    ],
+    origin:
+      "https://app.hypertune.com/projects/3579/main/draft/logic?selected_field_path=root%3EexampleFlag",
+  },
+};
 
-export type Rec = {
-
-}
+export type Rec = {};
 
 export type Rec3 = {
   id: string;
   name: string;
   email: string;
-}
+};
 
 export const EnvironmentEnumValues = [
   "development",
   "production",
-  "test"
+  "test",
 ] as const;
-export type Environment = typeof EnvironmentEnumValues[number];
+export type Environment = (typeof EnvironmentEnumValues)[number];
 
 /**
  * This `Context` input type is used for the `context` argument on your root field.
  * It contains details of the current `user` and `environment`.
- * 
- * You can define other custom input types with fields that are primitives, enums 
+ *
+ * You can define other custom input types with fields that are primitives, enums
  * or other input types.
  */
 export type Rec2 = {
   user: Rec3;
   environment: Environment;
-}
+};
 
 export type RootArgs = {
   context: Rec2;
-}
+};
 
 export type Root = {
   test: boolean;
   exampleFlag: boolean;
-}
+};
 
-const rootFallback = {test:false,exampleFlag:false};
+const rootFallback = { test: false, exampleFlag: false };
 
 export class RootNode extends sdk.Node {
   typeName = "Root" as const;
 
   getRootArgs(): RootArgs {
     const { step } = this.props;
-    return (step?.type === 'GetFieldStep' ? step.fieldArguments : {}) as RootArgs;
+    return (
+      step?.type === "GetFieldStep" ? step.fieldArguments : {}
+    ) as RootArgs;
   }
 
-  get({ fallback = rootFallback as Root}: { fallback?: Root } = {}): Root {
+  get({ fallback = rootFallback as Root }: { fallback?: Root } = {}): Root {
     const getQuery = null;
-    return this.evaluate(getQuery, fallback) as Root
+    return this.evaluate(getQuery, fallback) as Root;
   }
 
   /**
    * [Open in Hypertune UI]({@link https://app.hypertune.com/projects/3579/main/draft/logic?selected_field_path=root%3Etest})
    */
-  test({ args = {}, fallback }: { args?: Rec; fallback: boolean; }): boolean {
+  test({ args = {}, fallback }: { args?: Rec; fallback: boolean }): boolean {
     const props0 = this.getField("test", args);
     const expression0 = props0.expression;
 
-    if (
-      expression0 &&
-      expression0.type === "BooleanExpression"
-    ) {
+    if (expression0 && expression0.type === "BooleanExpression") {
       const node = new sdk.BooleanNode(props0);
       return node.get({ fallback });
     }
@@ -138,14 +170,17 @@ export class RootNode extends sdk.Node {
   /**
    * [Open in Hypertune UI]({@link https://app.hypertune.com/projects/3579/main/draft/logic?selected_field_path=root%3EexampleFlag})
    */
-  exampleFlag({ args = {}, fallback }: { args?: Rec; fallback: boolean; }): boolean {
+  exampleFlag({
+    args = {},
+    fallback,
+  }: {
+    args?: Rec;
+    fallback: boolean;
+  }): boolean {
     const props0 = this.getField("exampleFlag", args);
     const expression0 = props0.expression;
 
-    if (
-      expression0 &&
-      expression0.type === "BooleanExpression"
-    ) {
+    if (expression0 && expression0.type === "BooleanExpression") {
       const node = new sdk.BooleanNode(props0);
       return node.get({ fallback });
     }
@@ -158,61 +193,67 @@ export class RootNode extends sdk.Node {
 
 /**
  * This is your project schema expressed in GraphQL.
- * 
- * Define `Boolean` fields for feature flags, custom `enum` fields for flags with 
- * more than two states, `Int` fields for numeric flags like timeouts and limits, 
- * `String` fields to manage in-app copy, `Void` fields for analytics events, and 
- * fields with custom object and list types for more complex app configuration, 
+ *
+ * Define `Boolean` fields for feature flags, custom `enum` fields for flags with
+ * more than two states, `Int` fields for numeric flags like timeouts and limits,
+ * `String` fields to manage in-app copy, `Void` fields for analytics events, and
+ * fields with custom object and list types for more complex app configuration,
  * e.g. to use Hypertune as a CMS.
- * 
+ *
  * Once you've changed your schema, set your flag logic in the Logic view.
  */
 export type Source = {
   /**
    * You can add arguments to any field in your schema, which you can then use when
-   * setting its logic, including the logic of any nested fields. Your root field 
-   * already has a `context` argument. Since all flags are nested under the root 
+   * setting its logic, including the logic of any nested fields. Your root field
+   * already has a `context` argument. Since all flags are nested under the root
    * field, this context will be available to all of them.
    */
   root: Root;
-}
+};
 
-const sourceFallback = {root:{test:false,exampleFlag:false}};
+const sourceFallback = { root: { test: false, exampleFlag: false } };
 
 export type Rec5 = {
   args: RootArgs;
-}
+};
 
 export type Rec4 = {
   root: Rec5;
-}
+};
 
 /**
  * This is your project schema expressed in GraphQL.
- * 
- * Define `Boolean` fields for feature flags, custom `enum` fields for flags with 
- * more than two states, `Int` fields for numeric flags like timeouts and limits, 
- * `String` fields to manage in-app copy, `Void` fields for analytics events, and 
- * fields with custom object and list types for more complex app configuration, 
+ *
+ * Define `Boolean` fields for feature flags, custom `enum` fields for flags with
+ * more than two states, `Int` fields for numeric flags like timeouts and limits,
+ * `String` fields to manage in-app copy, `Void` fields for analytics events, and
+ * fields with custom object and list types for more complex app configuration,
  * e.g. to use Hypertune as a CMS.
- * 
+ *
  * Once you've changed your schema, set your flag logic in the Logic view.
  */
 export class SourceNode extends sdk.Node {
   typeName = "Query" as const;
 
-  get({ args, fallback = sourceFallback as Source}: { args: Rec4; fallback?: Source }): Source {
+  get({
+    args,
+    fallback = sourceFallback as Source,
+  }: {
+    args: Rec4;
+    fallback?: Source;
+  }): Source {
     const getQuery = mergeQueryAndArgs(query, args);
-    return this.evaluate(getQuery, fallback) as Source
+    return this.evaluate(getQuery, fallback) as Source;
   }
 
   /**
    * You can add arguments to any field in your schema, which you can then use when
-   * setting its logic, including the logic of any nested fields. Your root field 
-   * already has a `context` argument. Since all flags are nested under the root 
+   * setting its logic, including the logic of any nested fields. Your root field
+   * already has a `context` argument. Since all flags are nested under the root
    * field, this context will be available to all of them.
    */
-  root({ args }: { args: RootArgs; }): RootNode {
+  root({ args }: { args: RootArgs }): RootNode {
     const props0 = this.getField("root", args);
     const expression0 = props0.expression;
 
@@ -231,12 +272,12 @@ export class SourceNode extends sdk.Node {
 }
 
 export type VariableValues = Rec;
-export type DehydratedState = sdk.DehydratedState<Source, VariableValues>
-export type CreateSourceOptions = { 
-  token: string; 
+export type DehydratedState = sdk.DehydratedState<Source, VariableValues>;
+export type CreateSourceOptions = {
+  token: string;
   variableValues?: VariableValues;
   override?: sdk.DeepPartial<Source> | null;
-} & sdk.CreateOptions
+} & sdk.CreateOptions;
 
 export function createSource({
   token,
@@ -277,7 +318,7 @@ export function createSourceForServerOnly({
 /**
  * @deprecated use createSource instead.
  */
-export const initHypertune = createSource
+export const initHypertune = createSource;
 /**
  * @deprecated use SourceNode instead.
  */

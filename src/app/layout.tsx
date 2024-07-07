@@ -8,7 +8,7 @@ import { AxiomWebVitals } from "next-axiom";
 import Providers from "./providers";
 import { FooterBar } from "@app/components/footerBar";
 import { HeaderBar } from "@app/components/header/headerBar";
-import useTranslation from 'next-translate/useTranslation'
+import useTranslation from "next-translate/useTranslation";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +22,6 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   const { lang } = useTranslation();
   const isRTL = lang === "ar" || lang === "he";
 

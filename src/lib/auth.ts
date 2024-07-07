@@ -1,6 +1,6 @@
-import { authMiddleware } from '@descope/nextjs-sdk/server'
+import { authMiddleware } from "@descope/nextjs-sdk/server";
 
 export default authMiddleware({
-    redirectUrl: '/auth',
-    publicRoutes: ['/', '/auth']
-})
+  redirectUrl: "/auth",
+  publicRoutes: ["/", "/auth"],
+});

@@ -50,17 +50,17 @@ export function HypertuneSourceProvider({
       hypertune.createSource({
         initDataProvider: typeof window === "undefined" ? null : undefined,
         remoteLogging: {
-          mode: typeof window === "undefined" ? "off" : undefined
+          mode: typeof window === "undefined" ? "off" : undefined,
         },
         ...createSourceOptions,
       }),
     // Don't recreate the source even if createSourceOptions changes
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    []
+    [],
   );
 
   const [stateHash, setStateHash] = React.useState(
-    hypertuneSource.getStateHash()
+    hypertuneSource.getStateHash(),
   );
   const router = useRouter();
   React.useEffect(() => {
@@ -74,7 +74,7 @@ export function HypertuneSourceProvider({
         // Only refresh the page if the sdk was ready before this update
         router.refresh();
       }
-    }
+    };
     hypertuneSource.addUpdateListener(updateListener);
     return () => {
       hypertuneSource.removeUpdateListener(updateListener);
@@ -83,7 +83,7 @@ export function HypertuneSourceProvider({
 
   const value = React.useMemo(
     () => ({ hypertuneSource, stateHash }),
-    [hypertuneSource, stateHash]
+    [hypertuneSource, stateHash],
   );
 
   return (
@@ -107,7 +107,7 @@ const HypertuneRootContext = React.createContext(
     parent: null,
     step: null,
     expression: null,
-  })
+  }),
 );
 
 export function HypertuneRootProvider({

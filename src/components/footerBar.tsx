@@ -21,7 +21,7 @@ export function FooterBar() {
           </Footer.LinkGroup>
         </div>
         <Footer.Divider />
-        <Footer.Copyright href="#" by="Delivery Inc™" year={2024} /> Build By 
+        <Footer.Copyright href="#" by="Delivery Inc™" year={2024} /> Build By
         <Footer.Copyright href="#" by="Devco Solutions" year={2024} />
       </div>
     </Footer>

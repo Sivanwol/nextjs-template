@@ -12,7 +12,6 @@ import {
 import { useUser } from "@descope/nextjs-sdk/client";
 import { HeaderBrand } from "../common/headerBrand";
 
-
 export function HeaderAuthDeliveryBar() {
   const { user } = useUser();
   return (
@@ -22,13 +21,15 @@ export function HeaderAuthDeliveryBar() {
         <Dropdown
           arrowIcon={false}
           inline
-          label={
-            <Avatar alt="User settings" img={user.picture} rounded />
-          }
+          label={<Avatar alt="User settings" img={user.picture} rounded />}
         >
           <DropdownHeader>
-            <span className="block text-sm">{user.givenName} {user.familyName}</span>
-            <span className="block truncate text-sm font-medium">{user.email}</span>
+            <span className="block text-sm">
+              {user.givenName} {user.familyName}
+            </span>
+            <span className="block truncate text-sm font-medium">
+              {user.email}
+            </span>
           </DropdownHeader>
           <DropdownItem>Dashboard</DropdownItem>
           <DropdownItem>Settings</DropdownItem>
