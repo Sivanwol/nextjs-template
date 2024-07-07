@@ -5,7 +5,7 @@ import "./globals.css";
 import "@radix-ui/themes/styles.css";
 import { Link, Theme } from "@radix-ui/themes";
 import { AxiomWebVitals } from "next-axiom";
-import Providers from "./providers";
+import Providers from "../lib/providers";
 import { FooterBar } from "@app/components/footerBar";
 import { HeaderBar } from "@app/components/header/headerBar";
 import useTranslation from "next-translate/useTranslation";

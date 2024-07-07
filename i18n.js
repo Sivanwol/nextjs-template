@@ -1,3 +1,6 @@
+/**
+ * @type {import('next-translate').I18nConfig}
+ */
 module.exports = {
   locales: ["en", "he"],
   defaultLocale: "en",
@@ -6,4 +9,5 @@ module.exports = {
     "/": ["home", "menu"],
     "/sign-in": ["sign-in"],
   },
+  logBuild: true,
 };

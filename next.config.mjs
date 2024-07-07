@@ -33,6 +33,8 @@ const nextConfig = {
     }
 }
 
-const plugins = [nextTranslate, withPlausibleProxy, withAxiom]
+const plugins = [nextTranslate({
+    reactStrictMode: true
+    }), withPlausibleProxy, withAxiom]
 process.env.ANALYZE === 'true' && plugins.push(bundleAnalyzer)
 export default withPlugins(plugins, nextConfig)
