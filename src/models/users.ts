@@ -3,7 +3,7 @@ import { eq, ilike, and } from "drizzle-orm";
 import { db } from "@app/lib/db";
 import { users } from "@app/lib/schema";
 import crypto from "crypto";
-import { User } from "@app/lib/schema/user";
+import { User } from "@app/lib/requests/user";
 
 const SALT_ROUNDS = 10;
 const generatePasswordHash = (password: string) => {

@@ -1,3 +1,4 @@
+"use client";
 import { useSession, useUser } from "@descope/nextjs-sdk/client";
 import { HeaderGuestBar } from "./segments/headerGuestBar";
 import { HeaderAuthClientBar } from "./segments/headerAuthClientBar";

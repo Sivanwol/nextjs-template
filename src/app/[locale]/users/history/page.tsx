@@ -15,7 +15,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Table as BTable } from "react-bootstrap";
 import Link from "next/link";
 import UserTableActionItem from "@app/components/userTableActionItem";
-import { UserColumnDef, UserResponse } from "@app/lib/schema/user";
+import { UserColumnDef, UserResponse } from "@app/lib/requests/user";
 import useUserHistoryData from "@app/lib/hooks/useUserHistoryData";
 export default function UsersHistory() {
   useUserHistoryData();

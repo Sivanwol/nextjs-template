@@ -1,5 +1,5 @@
 import { ProfileFormValues } from "@app/lib/forms/ProfileFormValues";
-import { UserResponse } from "@app/lib/schema/user";
+import { UserResponse } from "@app/lib/requests/user";
 import { Badge, ListGroup } from "react-bootstrap";
 import { FieldErrors, UseFormRegister } from "react-hook-form";
 
