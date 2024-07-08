@@ -7,7 +7,7 @@ import {
   getCoreRowModel,
   useReactTable,
 } from "@tanstack/react-table";
-import { User, UserColumnDef } from "../../../../lib/requests/user";
+import { User, UserColumnDef } from "@app/lib/requests/user";
 import Image from "next/image";
 import useUserData from "@app/lib/hooks/useUserData";
 import { useUserStore } from "@app/lib/state/providers/user-store-provider";
