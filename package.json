@@ -63,7 +63,7 @@
     "dotenv": "^16.4.1",
     "drizzle-orm": "^0.30.10",
     "framer-motion": "^11.2.3",
-    "lru-cache": "^10.0.1",
+    "lru-cache": "^10.4.0",
     "lucide-react": "^0.378.0",
     "next": "14.2.3",
     "next-auth": "^5.0.0-beta.18",
