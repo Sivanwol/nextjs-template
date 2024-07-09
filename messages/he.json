@@ -1,6 +1,9 @@
 {
-  "menuGuest": {
-    "joinNowClient": "הצתרף כבעל עסק",
-    "joinNowDelivery": "הצתרף כשליח"
+  "common": {
+    "logo": "מערכת משלוחים",
+    "menuGuest": {
+      "joinNowClient": "הצתרף כבעל עסק",
+      "joinNowDelivery": "הצתרף כשליח"
+    }
   }
 }
