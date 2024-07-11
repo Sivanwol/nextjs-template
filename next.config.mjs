@@ -12,7 +12,7 @@ const nextConfig = {
   experimental: {
     turbo: {
       resolveAlias: {
-        'next-intl/config': './src/i18n.ts',
+        'next-intl/config': './i18n.ts',
       },
     },
     instrumentationHook: true,
