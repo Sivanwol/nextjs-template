@@ -1,13 +1,11 @@
 "use client";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import {
-  type Container,
   type ISourceOptions,
   MoveDirection,
   OutMode,
 } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim";
-import ParticlesBg from "particles-bg";
 import { useEffect, useMemo, useState } from "react";
 export default function PageEffects({
   children,
