@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 import axios from "axios";
-import { User } from "../schema/user";
+import { User } from "../requests/user";
 import { useUserStore } from "../state/providers/user-store-provider";
 
 export default function useUserHistoryData() {

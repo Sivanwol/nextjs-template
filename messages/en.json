@@ -1,0 +1,17 @@
+{
+  "common": {
+    "logo": "Demo Shop",
+    "menuGuest": {
+      "joinNowClient": "",
+      "joinNowDelivery": ""
+    }
+  },
+  "footer": {
+    "about": "About Us",
+    "contact": "Contact Us",
+    "privacy": "Privacy Policy",
+    "cookie": "Cookie Policy",
+    "credit": "Build by DevCo Solutions [Sivan Wolberg]",
+    "siteName": "DevCo Solutions"
+  }
+}

@@ -1,5 +1,5 @@
 import { createStore } from "zustand/vanilla";
-import { User, UserColumnDef, UserResponse } from "../schema/user";
+import { User, UserColumnDef, UserResponse } from "../requests/user";
 export type UserState = {
   users: User[];
   history: UserResponse[];

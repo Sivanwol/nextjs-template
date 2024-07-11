@@ -1,53 +1,19 @@
-export type User = {
-  id: string;
-  username: string;
-  gender: string;
-  name: {
-    title: string;
-    first: string;
-    last: string;
-  };
-  location: {
-    street: {
-      name: string;
-      number: number;
-    };
-    country: string;
-    city: string;
-    state: string;
-    postcode: string;
-  };
-  email: string;
-  phone: string;
-  cell: string;
-  picture: {
-    large: string;
-    medium: string;
-    thumbnail: string;
-  };
-};
-export type UserResponse = {
-  id: number;
-  externalId: string;
-  gender: string;
-  username: string;
-  title: string;
-  fullName: string;
-  email: string;
-  phone: string;
-  country: string;
-  city: string;
-  address: string;
-  thumbnail: string;
-};
+import { serial, text, varchar, timestamp, pgTable } from "drizzle-orm/pg-core";
 
-export type UserColumnDef = {
-  id: string;
-  thumbnail: string;
-  title: string;
-  name: string;
-  email: string;
-  phone: string;
-  country: string;
-  actions: any;
-};
+export const users = pgTable("users", {
+  id: serial("id").primaryKey(),
+  externalId: varchar("external_id", { length: 100 }),
+  gender: varchar("gender", { length: 10 }),
+  username: varchar("name", { length: 50 }),
+  password: varchar("password", { length: 100 }),
+  title: varchar("title", { length: 100 }),
+  fullName: varchar("full_name", { length: 100 }),
+  email: varchar("email", { length: 550 }),
+  phone: varchar("mobile", { length: 20 }),
+  country: varchar("country", { length: 50 }),
+  city: varchar("city", { length: 100 }),
+  address: varchar("address", { length: 200 }),
+  thumbnail: varchar("thumbnail", { length: 500 }),
+  createdAt: timestamp("created_at"),
+  updatedAt: timestamp("updated_at"),
+});
