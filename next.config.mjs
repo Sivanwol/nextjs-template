@@ -17,7 +17,6 @@ const nextConfig = {
     },
     instrumentationHook: true,
   },
-  output: 'standalone',
   transpilePackages: ['lucide-react'],
   reactStrictMode: true,
   images: {
