@@ -11,6 +11,7 @@ import { HeaderBar } from "@app/components/header/headerBar";
 import { ThemeModeScript } from "flowbite-react";
 import { NextIntlClientProvider, useMessages } from "next-intl";
 import FadeInTransition from "@app/components/transitions/fade-in";
+import { locales } from "@app/navigation";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,11 +28,14 @@ export default function RootLayout({
   params: { locale: string };
 }) {
   const { locale } = params;
-  const isRTL = locale === "he";
+  let selectLocale = locale;
+  let defaultLocale = "en";
+  if (!locales.includes(params.locale)) selectLocale = defaultLocale;
+  const isRTL = selectLocale === "he";
   const messages = useMessages();
   return (
     <Providers>
-      <NextIntlClientProvider locale={locale} messages={messages}>
+      <NextIntlClientProvider locale={selectLocale} messages={messages}>
         <html lang={locale} dir={isRTL ? "rtl" : "ltr"}>
           <head>
             <meta charSet="utf-8" />

@@ -10,6 +10,7 @@
     "token": "openssl rand -base64 32",
     "build": "next build",
     "start": "next start",
+    "start:local": "NEXT_OTEL_VERBOSE=1 node .next/standalone/server.js",
     "start:monitor": "NEXT_OTEL_VERBOSE=1 next start",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,md,mdx,css,yaml,yml}\"",
     "check": "prettier --check \"**/*.{ts,tsx,js,jsx,md,mdx,css,yaml,yml}\"",

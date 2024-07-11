@@ -2,9 +2,9 @@ import { withPlausibleProxy } from 'next-plausible'
 import withPlugins from 'next-compose-plugins'
 import withBundleAnalyzer from '@next/bundle-analyzer'
 import { withAxiom } from 'next-axiom';
-import withNextIntl from 'next-intl/plugin';
+import createNextIntlPlugin from 'next-intl/plugin';
 
-
+const withNextIntl = createNextIntlPlugin();
 const bundleAnalyzer = withBundleAnalyzer()
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -12,11 +12,12 @@ const nextConfig = {
   experimental: {
     turbo: {
       resolveAlias: {
-        'next-intl/config': './i18n.ts',
+        'next-intl/config': './src/i18n.ts',
       },
     },
     instrumentationHook: true,
   },
+  output: 'standalone',
   transpilePackages: ['lucide-react'],
   reactStrictMode: true,
   images: {
