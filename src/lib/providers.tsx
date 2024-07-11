@@ -1,5 +1,4 @@
 import React from "react";
-import { AuthProvider } from "@descope/nextjs-sdk";
 import getHypertune from "@app/lib/getHypertune";
 import { UserProvider } from "@app/lib/state/providers/user-store-provider";
 
@@ -9,9 +8,6 @@ const Providers = async ({
 }: Readonly<{
   children: any;
 }>) => {
-  if (process.env.NEXT_PUBLIC_DESCOPE_PROJECT_ID === undefined) {
-    throw new Error("NEXT_PUBLIC_DESCOPE_PROJECT_ID is not defined");
-  }
   const hypertune = await getHypertune();
   const serverDehydratedState = hypertune.dehydrate();
   const serverRootArgs = hypertune.getRootArgs();
@@ -24,11 +20,7 @@ const Providers = async ({
       dehydratedState={serverDehydratedState}
       rootArgs={serverRootArgs}
     >
-      <UserProvider>
-        <AuthProvider projectId={process.env.NEXT_PUBLIC_DESCOPE_PROJECT_ID}>
-          {children}
-        </AuthProvider>
-      </UserProvider>
+      <UserProvider>{children}</UserProvider>
     </HypertuneProvider>
   );
 };

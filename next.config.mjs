@@ -8,24 +8,25 @@ import withNextIntl from 'next-intl/plugin';
 const bundleAnalyzer = withBundleAnalyzer()
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    productionBrowserSourceMaps: process.env.ANALYZE === 'true',
-    experimental: {
-        missingSuspenseWithCSRBailout: false,
+  productionBrowserSourceMaps: process.env.ANALYZE === 'true',
+  experimental: {
+    turbo: {
+      resolveAlias: {
+        'next-intl/config': './src/i18n.ts',
+      },
     },
-
-    experimental: {
-        instrumentationHook: true,
-    },
-    transpilePackages: ['lucide-react'],
-    reactStrictMode: true,
-    images: {
-        remotePatterns: [
-            {
-                protocol: "https",
-                hostname: "**",
-            }
-        ]
-    }
+    instrumentationHook: true,
+  },
+  transpilePackages: ['lucide-react'],
+  reactStrictMode: true,
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**",
+      }
+    ]
+  }
 }
 
 const plugins = [withNextIntl, withPlausibleProxy, withAxiom]
