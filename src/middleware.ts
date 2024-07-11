@@ -11,7 +11,7 @@ export default createMiddleware({
 export const config = {
   matcher: [
     "/",
-    "/((?!/api|_next/static|_next/image|favicon.ico|apple-touch-icon.png|favicon.svg|logo.svg|images/books|icons|manifest).*)",
+    "/((?!/api|_next|favicon.ico|apple-touch-icon.png|favicon.svg|logo.svg|images|icons|manifest).*)",
     `/(en|he)/:path*`,
   ],
 };
