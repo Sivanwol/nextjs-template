@@ -71,20 +71,20 @@ export default function PageEffects({
             default: OutMode.out,
           },
           random: false,
-          speed: 6,
+          speed: 4,
           straight: false,
         },
         number: {
           density: {
             enable: true,
           },
-          value: 80,
+          value: 100,
         },
         opacity: {
           value: 0.5,
         },
         shape: {
-          type: "circle",
+          type: "triangles",
         },
         size: {
           value: { min: 1, max: 5 },
