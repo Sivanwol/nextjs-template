@@ -142,7 +142,7 @@
     "workerDirectory": "public"
   },
   "engines": {
-    "node": ">=18",
+    "node": ">=20",
     "npm": "please use Yarn instead of npm!",
     "yarn": ">=1.22"
   },
