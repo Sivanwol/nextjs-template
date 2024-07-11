@@ -4,12 +4,14 @@ import { useLocale, useTranslations } from "next-intl";
 export function HeaderSelectLanguage() {
   const locale = useLocale();
   const t = useTranslations("common");
-  const currentLanguage = t(`languages.${locale}`)
-  const placeHolder = t('languages.placeHolder', {selectLanguage: currentLanguage});
+  const currentLanguage = t(`languages.${locale}`);
+  const placeHolder = t("languages.placeHolder", {
+    selectLanguage: currentLanguage,
+  });
   return (
     <Dropdown label={placeHolder} inline>
-      <Dropdown.Item >{t('languages.en')}</Dropdown.Item>
-      <Dropdown.Item>{t('languages.he')}</Dropdown.Item>
+      <Dropdown.Item>{t("languages.en")}</Dropdown.Item>
+      <Dropdown.Item>{t("languages.he")}</Dropdown.Item>
     </Dropdown>
   );
 }
