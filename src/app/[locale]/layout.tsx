@@ -45,7 +45,7 @@ export default function RootLayout({
           <body className={inter.className}>
             <Theme>
               <FadeInTransition>
-                <div className="bg-search_mp-bg_white flex flex-col items-center">
+                <div className="w-full bg-search_mp-bg_white flex flex-col items-center">
                   <HeaderBar />
                   <main className="flex min-h-screen w-full flex-col items-center justify-center py-32">
                     {children}
