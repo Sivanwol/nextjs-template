@@ -8,17 +8,17 @@ export function cn(...inputs: ClassValue[]) {
 
 export function determinePage(pathname: string): Pages {
   switch (pathname.toLowerCase().trim()) {
-    case '/about':
+    case "/about":
       return Pages.About;
-    case '/my-services':
+    case "/my-services":
       return Pages.MyServices;
-    case '/my-cv':
+    case "/my-cv":
       return Pages.MyCv;
-    case '/my-work':
+    case "/my-work":
       return Pages.MyWork;
-    case '/contact':
+    case "/contact":
       return Pages.Contact;
     default:
-      return Pages.Home;;
+      return Pages.Home;
   }
 }

@@ -14,7 +14,7 @@ export function HeaderBrand() {
         alt={t("header.brandAlt")}
       />
       <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-        {t("header.brand") }
+        {t("header.brand")}
       </span>
     </NavbarBrand>
   );

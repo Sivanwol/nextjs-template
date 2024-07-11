@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { Pages } from "@app/lib/types";
 import { HeaderGuestBar } from "./segments/headerGuestBar";
 import { usePathname } from "next/navigation";

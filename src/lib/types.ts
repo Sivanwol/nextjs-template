@@ -4,8 +4,8 @@ export enum Pages {
   About,
   MyCv,
   MyWork,
-  Contact
+  Contact,
 }
 export type ActivePages = {
-  page: Pages
-}
+  page: Pages;
+};
