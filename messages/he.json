@@ -1,9 +1,28 @@
 {
   "common": {
-    "logo": "מערכת משלוחים",
-    "menuGuest": {
-      "joinNowClient": "הצתרף כבעל עסק",
-      "joinNowDelivery": "הצתרף כשליח"
+    "header": {
+      "brandAlt": "DevCo Site",
+      "brand": "DevCo Solutions"
+    },
+    "languages": {
+      "placeHolder": "Site Language {selectLanguage}",
+      "en": "English",
+      "he": "Hebrew"
+    },
+    "menu": {
+      "myServices": "My Services",
+      "myCV": "My CV",
+      "aboutme": "About Us",
+      "mywork": "My Work",
+      "contact": "Contact"
     }
+  },
+  "footer": {
+    "about": "About Us",
+    "contact": "Contact Us",
+    "privacy": "Privacy Policy",
+    "cookie": "Cookie Policy",
+    "credit": "Build by DevCo Solutions [Sivan Wolberg]",
+    "siteName": "DevCo Solutions"
   }
 }
