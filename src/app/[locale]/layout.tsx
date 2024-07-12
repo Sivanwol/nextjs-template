@@ -9,7 +9,7 @@ import { FooterBar } from "@app/components/footerBar";
 import { HeaderBar } from "@app/components/header/headerBar";
 import { ThemeModeScript } from "flowbite-react";
 import { NextIntlClientProvider, useMessages } from "next-intl";
-import FadeInTransition from "@app/components/transitions/fade-in";
+// import FadeInTransition from "@app/components/transitions/fade-in";
 import { locales } from "@app/navigation";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -43,17 +43,15 @@ export default function RootLayout({
           </head>
           <body className={inter.className}>
             <Theme>
-              <FadeInTransition>
-                <div className="w-full bg-search_mp-bg_white flex flex-col items-center">
-                  <HeaderBar />
-                  <main className="flex min-h-fit w-full flex-col items-center justify-center py-32">
-                    {children}
-                  </main>
-                </div>
-                <footer>
-                  <FooterBar />
-                </footer>
-              </FadeInTransition>
+              <div className="w-full bg-search_mp-bg_white flex flex-col items-center">
+                <HeaderBar />
+                <main className="flex min-h-fit w-full flex-col items-center justify-center py-32">
+                  {children}
+                </main>
+              </div>
+              <footer>
+                <FooterBar />
+              </footer>
             </Theme>
             <Analytics />
           </body>
