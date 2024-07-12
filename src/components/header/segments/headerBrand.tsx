@@ -13,7 +13,7 @@ export default function HeaderBrand() {
       <Image
         priority
         src={logoIcon}
-        className="mr-3 h-16 sm:h-19 w-[120] sm:w-[100] object-cover"
+        className="mr-3 h-35 sm:h-19 w-[120] sm:w-[75] object-cover"
         alt={t("header.brandAlt")}
       />
       <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white pl-3 pr-3">
