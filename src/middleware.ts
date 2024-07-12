@@ -12,6 +12,5 @@ export const config = {
   matcher: [
     "/",
     "/((?!/api|_next|favicon.ico|apple-touch-icon.png|favicon.svg|logo.svg|images|icons|manifest).*)",
-    `/(en|he)/:path*`,
   ],
 };

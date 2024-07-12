@@ -68,7 +68,7 @@ export default function PageEffects({
           outModes: {
             default: OutMode.out,
           },
-          random: false,
+          random: true,
           speed: 4,
           straight: false,
         },
