@@ -1,4 +1,4 @@
-import { HR, Navbar, NavbarLink } from "flowbite-react";
+import { Navbar, NavbarLink } from "flowbite-react";
 import { HeaderBrand } from "./headerBrand";
 import { useTranslations } from "next-intl";
 import { HeaderSelectLanguage } from "./headerSelectLanguage";
@@ -31,12 +31,11 @@ export function HeaderNavBar({
           <NavbarLink href="#" active={activePage === Pages.Contact}>
             {t("menu.contact")}
           </NavbarLink>
-          {/* <div className="flex md:order-2 ml-3 mr-3">
+          <div className="flex md:order-2 ml-3 mr-3">
             <HeaderSelectLanguage />
-          </div> */}
+          </div>
         </Navbar.Collapse>
       </Navbar>
-      <HR />
     </>
   );
 }
