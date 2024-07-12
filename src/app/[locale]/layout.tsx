@@ -5,7 +5,7 @@ import "./globals.css";
 import "@radix-ui/themes/styles.css";
 import { Theme } from "@radix-ui/themes";
 import Providers from "@app/lib/providers";
-// import { FooterBar } from "@app/components/footerBar";
+import { FooterBar } from "@app/components/footerBar";
 // import { HeaderBar } from "@app/components/header/headerBar";
 import { ThemeModeScript } from "flowbite-react";
 import { NextIntlClientProvider, useMessages } from "next-intl";
@@ -49,7 +49,9 @@ export default function RootLayout({
                   {children}
                 </main>
               </div>
-              <footer>{/* <FooterBar /> */}</footer>
+              <footer>
+                <FooterBar />
+              </footer>
             </Theme>
             <Analytics />
           </body>
