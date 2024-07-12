@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import logoIcon from "@public/logo.svg";
 
-export function HeaderBrand() {
+export default function HeaderBrand() {
   const t = useTranslations("common");
 
   return (

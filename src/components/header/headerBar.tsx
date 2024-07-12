@@ -1,5 +1,4 @@
-"use client";
-import { HeaderNavBar } from "./segments/headerNavBar";
-export function HeaderBar() {
+import HeaderNavBar from "./segments/headerNavBar";
+export default function HeaderBar() {
   return <HeaderNavBar />;
 }

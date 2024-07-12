@@ -1,9 +1,10 @@
+"use client";
 import { Navbar, NavbarLink } from "flowbite-react";
-import { HeaderBrand } from "./headerBrand";
+import HeaderBrand from "./headerBrand";
 import { useTranslations } from "next-intl";
-import { HeaderSelectLanguage } from "./headerSelectLanguage";
+import HeaderSelectLanguage from "./headerSelectLanguage";
 
-export function HeaderNavBar() {
+export default function HeaderNavBar() {
   const t = useTranslations("common");
   return (
     <>
