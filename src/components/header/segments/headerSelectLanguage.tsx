@@ -1,3 +1,4 @@
+"use client";
 import { Dropdown } from "flowbite-react";
 import { useLocale, useTranslations } from "next-intl";
 
