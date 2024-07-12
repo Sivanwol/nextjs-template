@@ -4,7 +4,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import "@radix-ui/themes/styles.css";
 import { Theme } from "@radix-ui/themes";
-import { AxiomWebVitals } from "next-axiom";
 import Providers from "@app/lib/providers";
 import { FooterBar } from "@app/components/footerBar";
 import { HeaderBar } from "@app/components/header/headerBar";
@@ -56,7 +55,6 @@ export default function RootLayout({
                 </footer>
               </FadeInTransition>
             </Theme>
-            <AxiomWebVitals />
             <Analytics />
           </body>
         </html>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Providers from "@app/lib/providers";
 import { Inter } from "next/font/google";
 import { ThemeModeScript } from "flowbite-react";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
@@ -17,12 +18,14 @@ export default async function RootLayout({
   // Add your custom root layout code here
   return (
     <Providers>
-      <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width" />
-        <ThemeModeScript />
-      </head>
-      <body className={inter.className}>{children}</body>
+      <html lang="en" dir="ltr">
+        <head>
+          <meta charSet="utf-8" />
+          <meta name="viewport" content="width=device-width" />
+        </head>
+        <body className={inter.className}>{children}</body>
+        <Analytics />
+      </html>
     </Providers>
   );
 }

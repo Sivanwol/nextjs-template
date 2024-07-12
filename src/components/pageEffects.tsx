@@ -94,10 +94,9 @@ export default function PageEffects({
   if (init) {
     return (
       <>
-        {children}
         <Particles id="tsparticles" options={options} />
       </>
     );
   }
-  return <>{children}</>;
+  return <></>;
 }
