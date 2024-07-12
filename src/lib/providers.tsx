@@ -6,9 +6,7 @@ const Providers = async ({
 }: Readonly<{
   children: any;
 }>) => {
-  return (
-    <UserProvider>{children}</UserProvider>
-  );
+  return <UserProvider>{children}</UserProvider>;
 };
 
 export default Providers;
