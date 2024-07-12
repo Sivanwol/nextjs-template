@@ -1,11 +1,10 @@
-"use client";
 import { HR, Navbar, NavbarLink } from "flowbite-react";
 import { HeaderBrand } from "./headerBrand";
 import { useTranslations } from "next-intl";
 import { HeaderSelectLanguage } from "./headerSelectLanguage";
 import { Pages } from "@app/lib/types";
 
-export function HeaderGuestBar({
+export function HeaderNavBar({
   activePage,
 }: Readonly<{
   activePage: Pages;
