@@ -49,9 +49,7 @@ export default function RootLayout({
                     {children}
                   </main>
                 </div>
-                <footer>
-                  <FooterBar />
-                </footer>
+                <FooterBar />
               </FadeInTransition>
             </Theme>
             <Analytics />
