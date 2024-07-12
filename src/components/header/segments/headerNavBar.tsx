@@ -31,9 +31,9 @@ export function HeaderNavBar({
           <NavbarLink href="#" active={activePage === Pages.Contact}>
             {t("menu.contact")}
           </NavbarLink>
-          <div className="flex md:order-2 ml-3 mr-3">
+          {/* <div className="flex md:order-2 ml-3 mr-3">
             <HeaderSelectLanguage />
-          </div>
+          </div> */}
         </Navbar.Collapse>
       </Navbar>
       <HR />
