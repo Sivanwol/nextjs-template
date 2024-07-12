@@ -9,8 +9,5 @@ export default createMiddleware({
 
 // Optionally, don't invoke Middleware on some paths
 export const config = {
-  matcher: [
-    "/",
-    "/((?!/api|_next|favicon.ico|apple-touch-icon.png|favicon.svg|logo.svg|images|icons|manifest).*)",
-  ],
+  matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],
 };
