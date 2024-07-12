@@ -33,8 +33,8 @@ export default function RootLayout({
   const isRTL = selectLocale === "he";
   const messages = useMessages();
   return (
-    <Providers>
-      <NextIntlClientProvider locale={selectLocale} messages={messages}>
+    <NextIntlClientProvider locale={selectLocale} messages={messages}>
+      <Providers>
         <html lang={locale} dir={isRTL ? "rtl" : "ltr"}>
           <head>
             <meta charSet="utf-8" />
@@ -58,7 +58,7 @@ export default function RootLayout({
             <Analytics />
           </body>
         </html>
-      </NextIntlClientProvider>
-    </Providers>
+      </Providers>
+    </NextIntlClientProvider>
   );
 }

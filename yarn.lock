@@ -9773,11 +9773,6 @@ next-intl@^3.15.3:
     negotiator "^0.6.3"
     use-intl "^3.15.3"
 
-next-joi@^2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/next-joi/-/next-joi-2.2.1.tgz#bd690b5eba02d6d5d8bae76a2f402fb11843eca8"
-  integrity sha512-m6/rDj9a9sp0CeMGy3np/7T2663QFinfiTY4MuJ9LEicU+6SiDim4wnsqG5CfzI4IQX4tupN6jSCtsv0t2EWnQ==
-
 next-plausible@^3.12.0:
   version "3.12.0"
   resolved "https://registry.yarnpkg.com/next-plausible/-/next-plausible-3.12.0.tgz#b54f344c63bd1bb743ce6ef4e54b39446b0f3840"
