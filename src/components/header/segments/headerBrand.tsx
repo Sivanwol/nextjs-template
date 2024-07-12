@@ -9,7 +9,7 @@ export default function HeaderBrand() {
   const t = useTranslations("common");
 
   return (
-    <NavbarBrand as={Link} href={process.env.NEXT_PUBLIC_API_URL}>
+    <NavbarBrand as={Link} href={process.env.NEXT_PUBLIC_API_URL || ""}>
       <Image
         priority
         src={logoIcon}
