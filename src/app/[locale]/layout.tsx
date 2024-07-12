@@ -6,7 +6,7 @@ import "@radix-ui/themes/styles.css";
 import { Theme } from "@radix-ui/themes";
 import Providers from "@app/lib/providers";
 import { FooterBar } from "@app/components/footerBar";
-import { HeaderBar } from "@app/components/header/headerBar";
+import HeaderBar from "@app/components/header/headerBar";
 import { ThemeModeScript } from "flowbite-react";
 import { NextIntlClientProvider, useMessages } from "next-intl";
 import FadeInTransition from "@app/components/transitions/fade-in";
@@ -33,13 +33,12 @@ export default function RootLayout({
   const isRTL = selectLocale === "he";
   const messages = useMessages();
   return (
-    <NextIntlClientProvider locale={selectLocale} messages={messages}>
-      <Providers>
+    <Providers>
+      <NextIntlClientProvider locale={selectLocale} messages={messages}>
         <html lang={locale} dir={isRTL ? "rtl" : "ltr"}>
           <head>
             <meta charSet="utf-8" />
             <meta name="viewport" content="width=device-width" />
-            <ThemeModeScript />
           </head>
           <body className={inter.className}>
             <Theme>
@@ -56,9 +55,10 @@ export default function RootLayout({
               </FadeInTransition>
             </Theme>
             <Analytics />
+            <ThemeModeScript />
           </body>
         </html>
-      </Providers>
-    </NextIntlClientProvider>
+      </NextIntlClientProvider>
+    </Providers>
   );
 }

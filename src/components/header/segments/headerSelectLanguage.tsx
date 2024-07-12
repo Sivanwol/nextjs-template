@@ -1,7 +1,7 @@
 import { Dropdown } from "flowbite-react";
 import { useLocale, useTranslations } from "next-intl";
 
-export function HeaderSelectLanguage() {
+export default function HeaderSelectLanguage() {
   const locale = useLocale();
   const t = useTranslations("common");
   const currentLanguage = t(`languages.${locale}`);
