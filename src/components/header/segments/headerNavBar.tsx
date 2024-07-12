@@ -9,7 +9,7 @@ export default function HeaderNavBar() {
   return (
     <>
       <Navbar fluid rounded>
-        <HeaderBrand />
+        {/* <HeaderBrand /> */}
         <Navbar.Toggle />
         <Navbar.Collapse>
           <NavbarLink href="#">{t("menu.myServices")}</NavbarLink>
