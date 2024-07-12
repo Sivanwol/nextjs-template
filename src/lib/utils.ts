@@ -7,7 +7,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function determinePage(pathname: string): Pages {
-  switch (pathname.toLowerCase().trim()) {
+  switch (pathname.toLowerCase()) {
     case "/about":
       return Pages.About;
     case "/my-services":
