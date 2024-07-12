@@ -5,8 +5,8 @@ import "./globals.css";
 import "@radix-ui/themes/styles.css";
 import { Theme } from "@radix-ui/themes";
 import Providers from "@app/lib/providers";
-import { FooterBar } from "@app/components/footerBar";
-import { HeaderBar } from "@app/components/header/headerBar";
+// import { FooterBar } from "@app/components/footerBar";
+// import { HeaderBar } from "@app/components/header/headerBar";
 import { ThemeModeScript } from "flowbite-react";
 import { NextIntlClientProvider, useMessages } from "next-intl";
 // import FadeInTransition from "@app/components/transitions/fade-in";
@@ -44,14 +44,12 @@ export default function RootLayout({
           <body className={inter.className}>
             <Theme>
               <div className="w-full bg-search_mp-bg_white flex flex-col items-center">
-                <HeaderBar />
+                {/* <HeaderBar /> */}
                 <main className="flex min-h-fit w-full flex-col items-center justify-center py-32">
                   {children}
                 </main>
               </div>
-              <footer>
-                <FooterBar />
-              </footer>
+              <footer>{/* <FooterBar /> */}</footer>
             </Theme>
             <Analytics />
           </body>
