@@ -45,7 +45,7 @@ export default function RootLayout({
               <FadeInTransition>
                 <div className="w-full bg-search_mp-bg_white flex flex-col items-center">
                   <HeaderBar />
-                  <main className="flex min-h-fit w-full flex-col items-center justify-center py-32">
+                  <main className="flex min-h-fit w-full flex-col items-center justify-center py-2">
                     {children}
                   </main>
                 </div>

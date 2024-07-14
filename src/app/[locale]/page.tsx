@@ -1,9 +1,10 @@
 import PageEffects from "@app/components/pageEffects";
+import AboutMeHP from "@app/components/segments/homepage/aboutMe";
 
 export default function Homepage() {
   return (
     <PageEffects>
-      <h1>Home Page</h1>
+      <AboutMeHP />
     </PageEffects>
   );
 }
