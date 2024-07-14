@@ -40,10 +40,10 @@ const options: ISourceOptions = {
   },
   particles: {
     color: {
-      value: "#d2d2d2",
+      value: "#9e9b9b88",
     },
     links: {
-      color: "#dfdfdf",
+      color: "#9e9b9b88",
       distance: 150,
       enable: true,
       opacity: 0.5,
