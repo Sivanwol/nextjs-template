@@ -2,7 +2,7 @@
 import { HR } from "flowbite-react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import { CodeBlock, paraisoLight } from "react-code-blocks";
+import { CodeBlock, dracula } from "react-code-blocks";
 import frontFlowImg from "@public/front-flow.jpg";
 export default function AboutMeHP() {
   const t = useTranslations("homepage");
@@ -12,7 +12,7 @@ export default function AboutMeHP() {
   const codeText = `<hello>\n\r${codeTextTitle}\n\r</hello>\n\r\n\r<about>\n\r${codeTextWhatIAmOffering}\n\r</about>\n\r\n\r<services>\n\r${codeTextWhatMyServices}\n\r</services>`;
   return (
     <>
-      <section className="border-2 border-appRed-500 px-3 sm:px-10 py-5 sm:py-10 mx-auto text-center mt-5 max-w-6xl">
+      <section className="border-2 border-appRed-500 px-3 sm:px-10 py-5 ml-5 mr-5 sm:py-10 mx-auto text-center mt-5 w-fit">
         <span
           id="intro"
           style={{
@@ -24,23 +24,24 @@ export default function AboutMeHP() {
         >
           &nbsp;
         </span>
-        <div className="flex flex-col items-center md:flex-row justify-between mt-14 gap-y-8r">
-          <article className="flex flex-col items-center w-full">
-            <div className="relative h-250">
+        <div className="flex flex-row items-center md:flex-row justify-between mt-14 gap-y-8r w-4xl">
+          <article className="grid grid-cols-2 gap-4 w-full">
+            <div className="h-250 md:col-span-2 justify-self-center">
               <Image src={frontFlowImg} alt="Front Flow" objectFit="cover" />
-              <HR.Text text={t("spacerTxt")} />
             </div>
 
-            <div className="relative h-250">
+            <div className="h-250 md:col-span-2 justify-self-center w-full">
               <CodeBlock
                 text={codeText}
                 showLineNumbers
+                theme={dracula}
                 wrapLongLines={true}
                 language="html"
                 customStyle={{
                   borderRadius: "5px",
-                  boxShadow: "1px 2px 3px rgba(0,0,0,0.35)",
-                  fontSize: "1rem",
+                  boxShadow: "1px 2px 3px rgba(0,0,0,0.55)",
+                  fontSize: "1.25rem",
+                  color: "#212121",
                 }}
               />
             </div>
