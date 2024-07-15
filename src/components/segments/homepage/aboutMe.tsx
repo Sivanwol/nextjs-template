@@ -26,7 +26,7 @@ export default function AboutMeHP() {
         <div className="flex flex-row items-center md:flex-row justify-between mt-14 gap-y-8r w-4xl">
           <article className="grid grid-cols-2 gap-4 w-full">
             <div className="h-250 col-span-2 lg:col-span-1 justify-self-center  soft-shadow-red">
-              <Image src={frontFlowImg} alt="Front Flow" objectFit="cover" />
+              <Image src={frontFlowImg} alt="Front Flow" />
             </div>
 
             <div className="h-250 col-span-2 lg:col-span-1 justify-self-center w-full soft-shadow-gray">
