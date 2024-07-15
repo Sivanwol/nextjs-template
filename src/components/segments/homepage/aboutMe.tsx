@@ -26,11 +26,11 @@ export default function AboutMeHP() {
         </span>
         <div className="flex flex-row items-center md:flex-row justify-between mt-14 gap-y-8r w-4xl">
           <article className="grid grid-cols-2 gap-4 w-full">
-            <div className="h-250 md:col-span-2 justify-self-center">
+            <div className="h-250 col-span-2 lg:col-span-1 justify-self-center  soft-shadow-red">
               <Image src={frontFlowImg} alt="Front Flow" objectFit="cover" />
             </div>
 
-            <div className="h-250 md:col-span-2 justify-self-center w-full">
+            <div className="h-250 col-span-2 lg:col-span-1 justify-self-center w-full soft-shadow-gray">
               <CodeBlock
                 text={codeText}
                 showLineNumbers
@@ -43,6 +43,12 @@ export default function AboutMeHP() {
                   fontSize: "1.25rem",
                   color: "#212121",
                 }}
+              />
+            </div>
+            <div className="w-full col-span-2">
+              <HR.Text
+                text={t("nextSegment")}
+                className="w-full text-left md:text-center text-sm font-medium text"
               />
             </div>
           </article>
