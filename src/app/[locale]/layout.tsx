@@ -7,7 +7,7 @@ import { FooterBar } from "@app/components/footerBar";
 import HeaderBar from "@app/components/header/headerBar";
 import { CustomFlowbiteTheme, Flowbite, ThemeModeScript } from "flowbite-react";
 import { NextIntlClientProvider, useMessages } from "next-intl";
-import FadeInTransition from "@app/components/transitions/fade-in";
+import FadeInTransition from "@app/components/effects/transitions/fade-in";
 import { locales } from "@app/navigation";
 
 const inter = Inter({ subsets: ["latin"] });
