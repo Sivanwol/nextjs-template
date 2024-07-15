@@ -44,11 +44,7 @@ export default function MySkillsHP() {
             >
               <div className="soft-shadow-slate h-[150] w-[170] hover:soft-shadow-red place-content-center">
                 <div className="flex justify-center">
-                  <Image
-                    src={cshrapImg}
-                    alt={t("skillsSegment.csharp")}
-                    objectFit="cover"
-                  />
+                  <Image src={cshrapImg} alt={t("skillsSegment.csharp")} />
                 </div>
               </div>
             </Tooltip>
@@ -60,11 +56,7 @@ export default function MySkillsHP() {
             >
               <div className="soft-shadow-slate h-[150] w-[170] hover:soft-shadow-red place-content-center">
                 <div className="flex justify-center">
-                  <Image
-                    src={angularImg}
-                    alt={t("skillsSegment.angular")}
-                    objectFit="cover"
-                  />
+                  <Image src={angularImg} alt={t("skillsSegment.angular")} />
                 </div>
               </div>
             </Tooltip>
@@ -76,11 +68,7 @@ export default function MySkillsHP() {
             >
               <div className="soft-shadow-slate h-[150] w-[170] hover:soft-shadow-red place-content-center">
                 <div className="flex justify-center">
-                  <Image
-                    src={pythonImg}
-                    alt={t("skillsSegment.python")}
-                    objectFit="cover"
-                  />
+                  <Image src={pythonImg} alt={t("skillsSegment.python")} />
                 </div>
               </div>
             </Tooltip>
@@ -92,11 +80,7 @@ export default function MySkillsHP() {
             >
               <div className="soft-shadow-slate h-[150] w-[170] hover:soft-shadow-red place-content-center">
                 <div className="flex justify-center">
-                  <Image
-                    src={nodeImg}
-                    alt={t("skillsSegment.node")}
-                    objectFit="cover"
-                  />
+                  <Image src={nodeImg} alt={t("skillsSegment.node")} />
                 </div>
               </div>
             </Tooltip>
@@ -108,11 +92,7 @@ export default function MySkillsHP() {
             >
               <div className="soft-shadow-slate h-[150] w-[170] hover:soft-shadow-red place-content-center">
                 <div className="flex justify-center">
-                  <Image
-                    src={phpImg}
-                    alt={t("skillsSegment.php")}
-                    objectFit="cover"
-                  />
+                  <Image src={phpImg} alt={t("skillsSegment.php")} />
                 </div>
               </div>
             </Tooltip>
@@ -124,11 +104,7 @@ export default function MySkillsHP() {
             >
               <div className="soft-shadow-slate h-[150] w-[170] hover:soft-shadow-red place-content-center">
                 <div className="flex justify-center">
-                  <Image
-                    src={reactImg}
-                    alt={t("skillsSegment.react")}
-                    objectFit="cover"
-                  />
+                  <Image src={reactImg} alt={t("skillsSegment.react")} />
                 </div>
               </div>
             </Tooltip>
@@ -140,11 +116,7 @@ export default function MySkillsHP() {
             >
               <div className="soft-shadow-slate h-[150] w-[170] hover:soft-shadow-red hover:soft-shadow-red place-content-center">
                 <div className="flex justify-center">
-                  <Image
-                    src={nextjsImg}
-                    alt={t("skillsSegment.nextjs")}
-                    objectFit="cover"
-                  />
+                  <Image src={nextjsImg} alt={t("skillsSegment.nextjs")} />
                 </div>
               </div>
             </Tooltip>
@@ -156,11 +128,7 @@ export default function MySkillsHP() {
             >
               <div className="soft-shadow-slate h-[150] w-[170] hover:soft-shadow-red place-content-center">
                 <div className="flex justify-center">
-                  <Image
-                    src={awsImg}
-                    alt={t("skillsSegment.aws")}
-                    objectFit="cover"
-                  />
+                  <Image src={awsImg} alt={t("skillsSegment.aws")} />
                 </div>
               </div>
             </Tooltip>
@@ -172,11 +140,7 @@ export default function MySkillsHP() {
             >
               <div className="soft-shadow-slate h-[150] w-[170] hover:soft-shadow-red place-content-center">
                 <div className="flex justify-center ">
-                  <Image
-                    src={dockerImg}
-                    alt={t("skillsSegment.docker")}
-                    objectFit="cover"
-                  />
+                  <Image src={dockerImg} alt={t("skillsSegment.docker")} />
                 </div>
               </div>
             </Tooltip>
