@@ -1,9 +1,35 @@
 {
   "common": {
-    "logo": "Demo Shop",
-    "menuGuest": {
-      "joinNowClient": "",
-      "joinNowDelivery": ""
+    "header": {
+      "brandAlt": "DevCo Site",
+      "brand": "DevCo Solutions"
+    },
+    "languages": {
+      "placeHolder": "Site Language {selectLanguage}",
+      "en": "English",
+      "he": "Hebrew"
+    },
+    "menu": {
+      "myServices": "My Services",
+      "myCV": "My CV",
+      "aboutme": "About Us",
+      "mywork": "My Work",
+      "contact": "Contact"
+    }
+  },
+  "homepage": {
+    "codeTextTitle": "Welcome to DevCo Solutions",
+    "codeTextWhatIAmOffering": "We are a team of experienced developers.\n\r We specialize in creating innovative and user-friendly solutions.\n\r we love to build beautiful and functional web applications.\n\r",
+    "codeTextWhatMyServices": "We specialize in End to end solutions as well cutting custom software solutions based customer needs.",
+    "nextSegment": "My Skills",
+    "skillsSegment": {
+      "php": "PHP",
+      "node": "Node.js",
+      "nextjs": "Next.js",
+      "csharp": "C#",
+      "react": "React",
+      "angular": "Angular",
+      "python": "Python"
     }
   },
   "footer": {
