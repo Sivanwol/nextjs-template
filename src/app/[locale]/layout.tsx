@@ -9,6 +9,8 @@ import { CustomFlowbiteTheme, Flowbite, ThemeModeScript } from "flowbite-react";
 import { NextIntlClientProvider, useMessages } from "next-intl";
 import FadeInTransition from "@app/components/effects/transitions/fade-in";
 import { locales } from "@app/navigation";
+import SpeedDial from "@app/components/common/speedDial";
+import PageEffects from "@app/components/effects/pageEffects";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -49,9 +51,12 @@ export default function RootLayout({
               <FadeInTransition>
                 <div className="w-full h-full bg-gray-50 flex flex-col items-center">
                   <HeaderBar />
-                  <main className="flex min-h-fit w-full flex-col items-center justify-center py-2">
-                    {children}
-                  </main>
+                  <PageEffects>
+                    <main className="flex min-h-fit w-full flex-col items-center justify-center py-2">
+                      {children}
+                      <SpeedDial />
+                    </main>
+                  </PageEffects>
                 </div>
                 <FooterBar />
               </FadeInTransition>

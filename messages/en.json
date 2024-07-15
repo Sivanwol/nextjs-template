@@ -12,9 +12,11 @@
     "menu": {
       "myServices": "My Services",
       "myCV": "My CV",
-      "aboutme": "About Us",
       "mywork": "My Work",
       "contact": "Contact"
+    },
+    "speedDial": {
+      "contacts": "Ways to Contact"
     }
   },
   "homepage": {
@@ -29,7 +31,9 @@
       "csharp": "C#",
       "react": "React",
       "angular": "Angular",
-      "python": "Python"
+      "python": "Python",
+      "aws": "AWS",
+      "docker": "Docker"
     }
   },
   "footer": {

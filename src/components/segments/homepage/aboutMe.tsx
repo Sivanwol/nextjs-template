@@ -16,8 +16,7 @@ export default function AboutMeHP() {
         <span
           id="intro"
           style={{
-            marginTop: "-130px",
-            paddingBottom: "130px",
+            marginTop: "-10px",
             display: "block",
             height: "0",
           }}

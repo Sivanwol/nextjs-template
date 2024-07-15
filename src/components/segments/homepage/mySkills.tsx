@@ -6,10 +6,12 @@ import pythonImg from "@public/skills/python.png";
 import phpImg from "@public/skills/php.png";
 import nodeImg from "@public/skills/nodejs.png";
 import reactImg from "@public/skills/react.png";
-import nextjs from "@public/skills/nextjs.png";
+import nextjsImg from "@public/skills/nextjs.png";
+import dockerImg from "@public/skills/docker.png";
+import awsImg from "@public/skills/aws.png";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { HR } from "flowbite-react";
+import { HR, Tooltip } from "flowbite-react";
 
 export default function MySkillsHP() {
   const t = useTranslations("homepage");
@@ -19,8 +21,7 @@ export default function MySkillsHP() {
         <span
           id="skills"
           style={{
-            marginTop: "-130px",
-            paddingBottom: "130px",
+            marginTop: "-10px",
             display: "block",
             height: "0",
           }}
@@ -35,61 +36,150 @@ export default function MySkillsHP() {
         </div>
         <div className="flex flex-row items-center md:flex-row justify-between mt-5 gap-y-8r w-4xl">
           <article className="grid grid-cols-3 grid-rows-2 gap-6 w-full">
-            <div className="soft-shadow-slate h-[150] w-[170] place-content-center">
-              <div className="flex justify-center">
-                <Image
-                  src={cshrapImg}
-                  alt={t("skills.csharp")}
-                  objectFit="cover"
-                />
+            <Tooltip
+              content={t("skillsSegment.csharp")}
+              placement="bottom"
+              animation="duration-1000"
+              style="light"
+            >
+              <div className="soft-shadow-slate h-[150] w-[170] hover:soft-shadow-red place-content-center">
+                <div className="flex justify-center">
+                  <Image
+                    src={cshrapImg}
+                    alt={t("skillsSegment.csharp")}
+                    objectFit="cover"
+                  />
+                </div>
               </div>
-            </div>
-            <div className="soft-shadow-slate h-[150] w-[170] place-content-center">
-              <div className="flex justify-center">
-                <Image
-                  src={angularImg}
-                  alt={t("skills.angular")}
-                  objectFit="cover"
-                />
+            </Tooltip>
+            <Tooltip
+              content={t("skillsSegment.angular")}
+              placement="bottom"
+              animation="duration-1000"
+              style="light"
+            >
+              <div className="soft-shadow-slate h-[150] w-[170] hover:soft-shadow-red place-content-center">
+                <div className="flex justify-center">
+                  <Image
+                    src={angularImg}
+                    alt={t("skillsSegment.angular")}
+                    objectFit="cover"
+                  />
+                </div>
               </div>
-            </div>
-            <div className="soft-shadow-slate h-[150] w-[170] place-content-center">
-              <div className="flex justify-center">
-                <Image
-                  src={pythonImg}
-                  alt={t("skills.python")}
-                  objectFit="cover"
-                />
+            </Tooltip>
+            <Tooltip
+              content={t("skillsSegment.python")}
+              placement="bottom"
+              animation="duration-1000"
+              style="light"
+            >
+              <div className="soft-shadow-slate h-[150] w-[170] hover:soft-shadow-red place-content-center">
+                <div className="flex justify-center">
+                  <Image
+                    src={pythonImg}
+                    alt={t("skillsSegment.python")}
+                    objectFit="cover"
+                  />
+                </div>
               </div>
-            </div>
-            <div className="soft-shadow-slate h-[150] w-[170] place-content-center">
-              <div className="flex justify-center">
-                <Image src={nodeImg} alt={t("skills.node")} objectFit="cover" />
+            </Tooltip>
+            <Tooltip
+              content={t("skillsSegment.node")}
+              placement="bottom"
+              animation="duration-1000"
+              style="light"
+            >
+              <div className="soft-shadow-slate h-[150] w-[170] hover:soft-shadow-red place-content-center">
+                <div className="flex justify-center">
+                  <Image
+                    src={nodeImg}
+                    alt={t("skillsSegment.node")}
+                    objectFit="cover"
+                  />
+                </div>
               </div>
-            </div>
-            <div className="soft-shadow-slate h-[150] w-[170] place-content-center">
-              <div className="flex justify-center">
-                <Image src={phpImg} alt={t("skills.php")} objectFit="cover" />
+            </Tooltip>
+            <Tooltip
+              content={t("skillsSegment.php")}
+              placement="bottom"
+              animation="duration-1000"
+              style="light"
+            >
+              <div className="soft-shadow-slate h-[150] w-[170] hover:soft-shadow-red place-content-center">
+                <div className="flex justify-center">
+                  <Image
+                    src={phpImg}
+                    alt={t("skillsSegment.php")}
+                    objectFit="cover"
+                  />
+                </div>
               </div>
-            </div>
-            <div className="soft-shadow-slate h-[150] w-[170] place-content-center">
-              <div className="flex justify-center">
-                <Image
-                  src={reactImg}
-                  alt={t("skills.react")}
-                  objectFit="cover"
-                />
+            </Tooltip>
+            <Tooltip
+              content={t("skillsSegment.react")}
+              placement="bottom"
+              animation="duration-1000"
+              style="light"
+            >
+              <div className="soft-shadow-slate h-[150] w-[170] hover:soft-shadow-red place-content-center">
+                <div className="flex justify-center">
+                  <Image
+                    src={reactImg}
+                    alt={t("skillsSegment.react")}
+                    objectFit="cover"
+                  />
+                </div>
               </div>
-            </div>
-            <div className="soft-shadow-slate h-[150] w-[170] place-content-center">
-              <div className="flex justify-center">
-                <Image
-                  src={nextjs}
-                  alt={t("skills.nextjs")}
-                  objectFit="cover"
-                />
+            </Tooltip>
+            <Tooltip
+              content={t("skillsSegment.csharp")}
+              placement="bottom"
+              animation="duration-1000"
+              style="light"
+            >
+              <div className="soft-shadow-slate h-[150] w-[170] hover:soft-shadow-red hover:soft-shadow-red place-content-center">
+                <div className="flex justify-center">
+                  <Image
+                    src={nextjsImg}
+                    alt={t("skillsSegment.nextjs")}
+                    objectFit="cover"
+                  />
+                </div>
               </div>
-            </div>
+            </Tooltip>
+            <Tooltip
+              content={t("skillsSegment.aws")}
+              placement="bottom"
+              animation="duration-1000"
+              style="light"
+            >
+              <div className="soft-shadow-slate h-[150] w-[170] hover:soft-shadow-red place-content-center">
+                <div className="flex justify-center">
+                  <Image
+                    src={awsImg}
+                    alt={t("skillsSegment.aws")}
+                    objectFit="cover"
+                  />
+                </div>
+              </div>
+            </Tooltip>
+            <Tooltip
+              content={t("skillsSegment.docker")}
+              placement="bottom"
+              animation="duration-1000"
+              style="light"
+            >
+              <div className="soft-shadow-slate h-[150] w-[170] hover:soft-shadow-red place-content-center">
+                <div className="flex justify-center ">
+                  <Image
+                    src={dockerImg}
+                    alt={t("skillsSegment.docker")}
+                    objectFit="cover"
+                  />
+                </div>
+              </div>
+            </Tooltip>
           </article>
         </div>
       </section>
