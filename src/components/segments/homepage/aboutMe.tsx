@@ -45,12 +45,6 @@ export default function AboutMeHP() {
                 }}
               />
             </div>
-            <div className="w-full col-span-2">
-              <HR.Text
-                text={t("nextSegment")}
-                className="w-full text-left md:text-center text-sm font-medium text"
-              />
-            </div>
           </article>
         </div>
       </section>
