@@ -16,7 +16,12 @@
       "contact": "Contact"
     },
     "speedDial": {
-      "contacts": "Ways to Contact"
+      "contacts": "Ways to Contact",
+      "facebook": "Facebook",
+      "whatsup": "Let's Talk",
+      "linkedin": "My Linkedin Profile",
+      "github": "Let see what i build in GitHub as Open Source",
+      "email": "Email"
     }
   },
   "homepage": {

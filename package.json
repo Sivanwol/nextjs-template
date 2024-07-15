@@ -26,9 +26,13 @@
     "@dnd-kit/utilities": "^3.2.2",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
+    "@fontsource/roboto": "^5.0.13",
     "@hookform/resolvers": "^3.9.0",
     "@knocklabs/node": "^0.6.13",
     "@libsql/client": "^0.7.0",
+    "@mui/icons-material": "^5.16.1",
+    "@mui/material": "^5.16.1",
+    "@mui/styled-engine-sc": "^6.0.0-alpha.18",
     "@neondatabase/serverless": "^0.9.3",
     "@opentelemetry/api": "^1.9.0",
     "@opentelemetry/api-logs": "^0.52.1",
@@ -76,6 +80,7 @@
     "recharts": "^2.12.7",
     "server-only": "^0.0.1",
     "sharp": "^0.33.4",
+    "styled-components": "^6.1.11",
     "uploadthing": "^6.10.4",
     "uuid": "^10.0.0",
     "zod": "^3.23.8",
@@ -115,6 +120,10 @@
     "tailwindcss": "^3.4.3",
     "tailwindcss-animate": "^1.0.7",
     "typescript": "^5"
+  },
+  "peerDependencies": {
+    "react": "^17.0.0 || ^18.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0"
   },
   "browser": {
     "crypto": false,

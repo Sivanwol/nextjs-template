@@ -9,8 +9,9 @@ import { CustomFlowbiteTheme, Flowbite, ThemeModeScript } from "flowbite-react";
 import { NextIntlClientProvider, useMessages } from "next-intl";
 import FadeInTransition from "@app/components/effects/transitions/fade-in";
 import { locales } from "@app/navigation";
-import SpeedDial from "@app/components/common/speedDial";
 import PageEffects from "@app/components/effects/pageEffects";
+import { StyledEngineProvider } from "@mui/material";
+import SpeedDialComponent from "@app/components/common/speedDial";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -48,18 +49,20 @@ export default function RootLayout({
           </head>
           <body className={inter.className + "bg-gray-50  dark:bg-gray-800"}>
             <Flowbite theme={{ theme: customTheme }}>
-              <FadeInTransition>
-                <div className="w-full h-full bg-gray-50 flex flex-col items-center">
-                  <HeaderBar />
-                  <PageEffects>
-                    <main className="flex min-h-fit w-full flex-col items-center justify-center py-2">
-                      {children}
-                      <SpeedDial />
-                    </main>
-                  </PageEffects>
-                </div>
-                <FooterBar />
-              </FadeInTransition>
+              <StyledEngineProvider injectFirst>
+                <FadeInTransition>
+                  <div className="w-full h-full bg-gray-50 flex flex-col items-center">
+                    <HeaderBar />
+                    <PageEffects>
+                      <main className="flex min-h-fit w-full flex-col items-center justify-center py-2">
+                        {children}
+                        <SpeedDialComponent />
+                      </main>
+                    </PageEffects>
+                  </div>
+                  <FooterBar />
+                </FadeInTransition>
+              </StyledEngineProvider>
             </Flowbite>
             <Analytics />
             <ThemeModeScript />

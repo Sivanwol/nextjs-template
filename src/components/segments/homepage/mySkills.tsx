@@ -35,7 +35,7 @@ export default function MySkillsHP() {
           />
         </div>
         <div className="flex flex-row items-center md:flex-row justify-between mt-5 gap-y-8r w-4xl">
-          <article className="grid grid-cols-3 grid-rows-2 gap-6 w-full">
+          <article className="grid grid-cols-2 sm:grid-cols-3 grid-rows-2 gap-6 w-full">
             <Tooltip
               content={t("skillsSegment.csharp")}
               placement="bottom"
