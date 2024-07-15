@@ -59,6 +59,7 @@
     "drizzle-orm": "^0.30.10",
     "flowbite": "1.7.0",
     "flowbite-react": "^0.10.1",
+    "formik": "^2.4.6",
     "framer-motion": "^11.2.3",
     "hypertune": "^2.3.8",
     "lru-cache": "^11.0.0",
@@ -83,6 +84,7 @@
     "styled-components": "^6.1.11",
     "uploadthing": "^6.10.4",
     "uuid": "^10.0.0",
+    "yup": "^1.4.0",
     "zod": "^3.23.8",
     "zukeeper": "^1.0.2",
     "zustand": "^4.5.4"

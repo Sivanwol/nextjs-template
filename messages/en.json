@@ -39,6 +39,31 @@
       "python": "Python",
       "aws": "AWS",
       "docker": "Docker"
+    },
+    "contactSegment": {
+      "nextSegment": "Contact Us",
+      "contactForm": {
+        "validations": {
+          "name": "Please enter your name.",
+          "email": "Please enter a valid email address.",
+          "required": "This {fieldName} is required.",
+          "phone": "Please enter a valid phone number.",
+          "subject": "Please enter a subject.",
+          "message": "Please enter a message.",
+          "maxLength": "Please keep the message under {maxLength} characters.",
+          "minLength": "Please enter a message with at least {minLength} characters.",
+          "inputError": "Please fill in all required fields.",
+          "success": "Thank you for your message. We will contact you shortly.",
+          "error": "There was an error sending your message. Please try again later."
+        },
+        "title": "Contact Us",
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone",
+        "subject": "Subject",
+        "message": "Message",
+        "submit": "Sent"
+      }
     }
   },
   "footer": {
