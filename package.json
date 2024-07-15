@@ -93,7 +93,6 @@
     "@storybook/nextjs": "^8.1.11",
     "@storybook/react": "^8.1.11",
     "@storybook/test": "^8.1.11",
-    "@types/joi": "^17.2.3",
     "@types/ms": "^0.7.34",
     "@types/node": "^20",
     "@types/node-fetch": "^2.6.4",
