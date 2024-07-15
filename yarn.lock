@@ -8851,16 +8851,6 @@ lodash.debounce@^4.0.8:
   resolved "https://registry.yarnpkg.com/lodash.debounce/-/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
   integrity sha512-FT1yDzDYEoYWhnSGnpE/4Kj1fLZkDFyqRb7fNt6FdYOSxlUWAtp42Eh6Wb0rGIv/m9Bgo7x4GhQbm5Ys4SG5ow==
 
-lodash.flatmap@^4.5.0:
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/lodash.flatmap/-/lodash.flatmap-4.5.0.tgz#ef8cbf408f6e48268663345305c6acc0b778702e"
-  integrity sha512-/OcpcAGWlrZyoHGeHh3cAoa6nGdX6QYtmzNP84Jqol6UEQQ2gIaU3H+0eICcjcKGl0/XF8LWOujNn9lffsnaOg==
-
-lodash.isequal@^4.5.0:
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/lodash.isequal/-/lodash.isequal-4.5.0.tgz#415c4478f2bcc30120c22ce10ed3226f7d3e18e0"
-  integrity sha512-pDo3lu8Jhfjqls6GkMgpahsF9kCyayhgykjyLMNFTKWrpVdAQtYyB4muAMWozBB4ig/dtWAmsMxLEI8wuz+DYQ==
-
 lodash.isplainobject@^4.0.6:
   version "4.0.6"
   resolved "https://registry.yarnpkg.com/lodash.isplainobject/-/lodash.isplainobject-4.0.6.tgz#7c526a52d89b45c45cc690b88163be0497f550cb"
@@ -10448,11 +10438,6 @@ react-icons@5.2.1:
   resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-5.2.1.tgz#28c2040917b2a2eda639b0f797bff1888e018e4a"
   integrity sha512-zdbW5GstTzXaVKvGSyTaBalt7HSfuK5ovrzlpyiWHAFXndXTdd/1hdDHI4xBM1Mn7YriT6aqESucFl9kEXzrdw==
 
-react-image-particles@^1.0.8:
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/react-image-particles/-/react-image-particles-1.0.8.tgz#1940f5d4321d4795b68dc521e6a86963f8eb413f"
-  integrity sha512-1uXit7dpmaqrQm24qvf/OaAoIsZINT0A/7HY5YKSrfm9elMMaEWwfBM9QPbqwloh8I3PfZgpEdyzF0EjO4h31g==
-
 react-is@18.1.0:
   version "18.1.0"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-18.1.0.tgz#61aaed3096d30eacf2a2127118b5b41387d32a67"
@@ -10472,15 +10457,6 @@ react-is@^18.0.0:
   version "18.3.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-18.3.1.tgz#e83557dc12eae63a99e003a46388b1dcbb44db7e"
   integrity sha512-/LLMVyas0ljjAtoYiPqYiL8VWXzUUdThrmU5+n20DZv+a+ClRoevUzw5JxU+Ieh5/c87ytoTBV9G1FiKfNJdmg==
-
-react-particle-image@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/react-particle-image/-/react-particle-image-1.0.2.tgz#dd55f2c40a995e1fd20f5ff77e56ce2e6a93b8c4"
-  integrity sha512-6Njiagfhbe0VIxuVlhcWP0bk9g42xLaHTcHT7ztTxZ7GdXJtTDNzbW2hMjMV74LdST1lKag7e7kw+5DDmojzTA==
-  dependencies:
-    lodash.flatmap "^4.5.0"
-    lodash.isequal "^4.5.0"
-    lodash.throttle "^4.1.1"
 
 react-refresh@^0.14.0:
   version "0.14.2"
