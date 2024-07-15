@@ -76,5 +76,9 @@ export default {
       },
     },
   },
-  plugins: [flowbite.plugin(), require("tailwindcss-animate")],
+  plugins: [
+    flowbite.plugin(),
+    require("tailwindcss-animate"),
+    require("./plugins/tailwind/softShadow"),
+  ],
 } satisfies Config;
