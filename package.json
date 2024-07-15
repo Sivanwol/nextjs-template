@@ -129,7 +129,7 @@
     "next-compose-plugins": "^2.2.1",
     "postcss": "^8",
     "prettier": "^3.3.2",
-    "storybook": "^8.1.11",
+    "storybook": "^8.2.2",
     "tailwind-merge": "^2.4.0",
     "tailwindcss": "^3.4.3",
     "tailwindcss-animate": "^1.0.7",
