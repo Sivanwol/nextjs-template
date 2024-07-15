@@ -12,14 +12,10 @@ export default function HeaderNavBar() {
         <HeaderBrand />
         <Navbar.Toggle />
         <Navbar.Collapse>
-          <NavbarLink href="#">{t("menu.myServices")}</NavbarLink>
+          <NavbarLink href="#services">{t("menu.myServices")}</NavbarLink>
           <NavbarLink href="#">{t("menu.myCV")}</NavbarLink>
-          <NavbarLink href="#">{t("menu.aboutme")}</NavbarLink>
-          <NavbarLink href="#">{t("menu.mywork")}</NavbarLink>
-          <NavbarLink href="#">{t("menu.contact")}</NavbarLink>
-          <div className="flex md:order-2 ml-3 mr-3">
-            <HeaderSelectLanguage />
-          </div>
+          <NavbarLink href="#work">{t("menu.mywork")}</NavbarLink>
+          <NavbarLink href="#contact">{t("menu.contact")}</NavbarLink>
         </Navbar.Collapse>
       </Navbar>
     </>

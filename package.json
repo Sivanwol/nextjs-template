@@ -72,6 +72,7 @@
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.52.0",
     "react-social-icons": "^6.16.0",
+    "react-speed-dial": "^0.5.2",
     "recharts": "^2.12.7",
     "server-only": "^0.0.1",
     "sharp": "^0.33.4",

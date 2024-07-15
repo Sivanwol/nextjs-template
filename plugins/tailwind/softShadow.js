@@ -12,7 +12,6 @@ const softShadowPluginFn = ({ theme, addUtilities }) => {
       };
     }
   }
-  console.log(softShadowUtilities, colors);
   addUtilities(softShadowUtilities);
 };
 

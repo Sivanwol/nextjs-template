@@ -10035,6 +10035,11 @@ react-social-icons@^6.16.0:
     react "^18.2.0"
     react-dom "^18.2.0"
 
+react-speed-dial@^0.5.2:
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/react-speed-dial/-/react-speed-dial-0.5.2.tgz#bb0a7145337c1dcf80407dca1e5dfb7b861c5529"
+  integrity sha512-CoiXML7m4tSF3SYgFDUuiL3+zaZOu9bG4scYxHiEIOq5WPg6k0Nzv8FKRRoAG0yHJDGxAwFMBsXJGw0RHPvJdA==
+
 react-syntax-highlighter@^15.5.0:
   version "15.5.0"
   resolved "https://registry.yarnpkg.com/react-syntax-highlighter/-/react-syntax-highlighter-15.5.0.tgz#4b3eccc2325fa2ec8eff1e2d6c18fa4a9e07ab20"
