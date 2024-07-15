@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 export function FooterBar() {
   const t = useTranslations("footer");
   return (
-    <Footer container>
+    <Footer container style={{ borderBottom: "0px none" }}>
       <div className="w-full text-center">
         <div className="w-full justify-between md:flex md:items-center md:justify-between">
           <FooterCopyright href="#" by={t("siteName")} year={2024} />

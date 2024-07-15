@@ -1,4 +1,4 @@
-import { HeaderGuestBar } from "./segments/headerGuestBar";
-export function HeaderBar() {
-  return <HeaderGuestBar />;
+import HeaderNavBar from "./segments/headerNavBar";
+export default function HeaderBar() {
+  return <HeaderNavBar />;
 }
