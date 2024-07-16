@@ -39,8 +39,8 @@ export default function SpeedDialComponent() {
   return (
     <SpeedDial
       ariaLabel={t("speedDial.contacts")}
-      className="animate-bounce"
-      sx={{ position: "absolute", bottom: 16, right: 16 }}
+      className="transition-opacity ease-in duration-700 opacity-100"
+      sx={{ position: "fixed", bottom: 16, right: 16 }}
       icon={<SpeedDialIcon />}
     >
       {actions.map((action) => (
