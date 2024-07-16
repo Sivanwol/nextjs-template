@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 import flowbite from "flowbite-react/tailwind";
+import { theme } from "flowbite-react";
 
 export default {
   darkMode: ["class"],
@@ -71,6 +72,8 @@ export default {
         },
       },
       animation: {
+        fadeIn: "transition-opacity ease-in duration-700 opacity-100",
+        fadeOut: "transition-opacity ease-in duration-700 opacity-0",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },

@@ -15,10 +15,12 @@ import { useFormState, useFormStatus } from "react-dom";
 import { sentEmail } from "@app/lib/server/actions/mail";
 import { HiInformationCircle } from "react-icons/hi";
 import { Alert } from "flowbite-react";
+import { useState } from "react";
 
 export default function ContactForm() {
   const t = useTranslations("homepage");
   const { pending } = useFormStatus();
+  const [requestSent, setRequestSent] = useState(false);
   const [state, formAction] = useFormState(sentEmail, ContactFormInitialValues);
   const {
     values,
@@ -32,6 +34,7 @@ export default function ContactForm() {
     initialValues: ContactFormInitialValues,
     validationSchema: ContactValidationFormSchema(t),
     onSubmit: (values) => {
+      setRequestSent(true);
       const formData: FormData = new FormData();
       for (const [key, value] of Object.entries(values)) {
         formData.append(key, value);
@@ -120,12 +123,28 @@ export default function ContactForm() {
         error={touched.message && Boolean(errors.message)}
         helperText={touched.message && errors.message}
       />
-      {state ? (
-        <Alert color="failure" icon={HiInformationCircle} className="mt-3 mb-3">
+      {state?.message && requestSent ? (
+        <Alert
+          color="failure"
+          icon={HiInformationCircle}
+          className="transition-opacity ease-in duration-700 opacity-100 mt-3 mb-3"
+        >
           <span className="font-medium pr-3">Sent Failed!</span>
           {state?.message}
         </Alert>
       ) : null}
+
+      {!state?.message && requestSent ? (
+        <Alert
+          color="success"
+          icon={HiInformationCircle}
+          className="transition-opacity ease-in duration-700 opacity-100 mt-3 mb-3"
+        >
+          <span className="font-medium pr-3">Sent Received!</span>
+          You'r contact request been sent
+        </Alert>
+      ) : null}
+
       <div className="mt-4 flex flex-col content-end">
         <ButtonGroup size="large" aria-label="Large button group">
           <Button
@@ -143,7 +162,10 @@ export default function ContactForm() {
             variant="contained"
             type="reset"
             disabled={pending}
-            onClick={() => resetForm()}
+            onClick={() => {
+              resetForm();
+              setRequestSent(false);
+            }}
             className="soft-shadow-red hover:soft-shadow-red w-[150px] mx-auto"
           >
             {t("contactSegment.contactForm.reset")}
