@@ -16,7 +16,7 @@ export async function sentEmail(prevState: any, formData: FormData) {
   console.log("Received contact form values:", values);
   const t = await getTranslations("homepage");
   const validation = ContactValidationFormSchema(t).isValidSync(values);
-  if (validation) {
+  if (!validation) {
     console.error("Validation errors:", validation);
     return { message: t("contactSegment.contactForm.validations.error") };
   }
