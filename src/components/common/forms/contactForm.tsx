@@ -141,7 +141,7 @@ export default function ContactForm() {
           className="transition-opacity ease-in duration-700 opacity-100 mt-3 mb-3"
         >
           <span className="font-medium pr-3">Sent Received!</span>
-          You'r contact request been sent
+          Your contact request been sent
         </Alert>
       ) : null}
 
