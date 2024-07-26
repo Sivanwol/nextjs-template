@@ -1,22 +1,22 @@
-import { useState, useRef } from "react";
-import { IRefPhaserGame, PhaserGame } from "./PhaserGame";
+import { useEffect } from "react";
+import RunGame from "./Game";
 
 const GameWrapper = ({ config }: { config: Phaser.Types.Core.GameConfig }) => {
-  // The sprite can only be moved in the MainMenu Scene
-  const [canMoveSprite, setCanMoveSprite] = useState(true);
-  //  References to the PhaserGame component (game and scene are exposed)
-  const phaserRef = useRef<IRefPhaserGame | null>(null);
-  // Event emitted from the PhaserGame component
-  const currentScene = (scene: Phaser.Scene) => {};
+  const refElem = "game-container";
 
-  return (
-    <div id="wrapper">
-      <PhaserGame
-        ref={phaserRef}
-        config={config}
-        currentActiveScene={currentScene}
-      />
-    </div>
-  );
+  const loadGame = async () => {
+    if (typeof window !== "object") {
+      return;
+    }
+
+    const game = RunGame(refElem, config);
+    game.scene.start("BootScene");
+    return;
+  };
+  useEffect(() => {
+    loadGame().catch(console.error);
+  }, [loadGame]);
+
+  return <div id={refElem}></div>;
 };
 export default GameWrapper;

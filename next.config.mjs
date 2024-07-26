@@ -18,7 +18,7 @@ const nextConfig = {
     instrumentationHook: true,
   },
   transpilePackages: ['lucide-react'],
-  reactStrictMode: true,
+  reactStrictMode: false,
   images: {
     remotePatterns: [
       {
