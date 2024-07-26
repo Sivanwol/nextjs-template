@@ -16,23 +16,25 @@ export const PhaserGame = forwardRef<IRefPhaserGame, IProps>(
   function PhaserGame({ currentActiveScene, config }, ref) {
     const game = useRef<Phaser.Game | null>(null!);
     const refElem = "game-container";
-    const loadGame = async () => {
-      if (typeof window !== "object") {
-        return;
+    useLayoutEffect(() => {
+      if (game.current === null) {
+        game.current = RunGame(refElem, config);
+        if (typeof ref === "function") {
+          ref({ game: game.current, scene: null });
+        } else if (ref) {
+          ref.current = { game: game.current, scene: null };
+        }
       }
-
-      var gameObj = RunGame(refElem, config);
-      game.current = gameObj;
-      if (typeof ref === "function") {
-        ref({ game: game.current, scene: null });
-      } else if (ref) {
-        ref.current = { game: game.current, scene: null };
-      }
-      game.current.scene.start("BootScene");
-      return null;
-    };
+      return () => {
+        if (game.current) {
+          game.current.destroy(true);
+          if (game.current !== null) {
+            game.current = null;
+          }
+        }
+      };
+    }, [config, ref]);
     useEffect(() => {
-      loadGame().catch(console.error);
       EventBus.on("current-scene-ready", (scene_instance: Phaser.Scene) => {
         if (currentActiveScene && typeof currentActiveScene === "function") {
           currentActiveScene(scene_instance);
@@ -48,7 +50,7 @@ export const PhaserGame = forwardRef<IRefPhaserGame, IProps>(
         game.current?.destroy(true);
         EventBus.removeListener("current-scene-ready");
       };
-    }, [loadGame, currentActiveScene, config, ref]);
+    }, [currentActiveScene, config, ref]);
 
     return <div id={refElem}></div>;
   },
