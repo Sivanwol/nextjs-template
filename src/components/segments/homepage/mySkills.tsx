@@ -1,14 +1,14 @@
 "use client";
 
-import cshrapImg from "@public/skills/csharp.png";
-import angularImg from "@public/skills/angular.png";
-import pythonImg from "@public/skills/python.png";
-import phpImg from "@public/skills/php.png";
-import nodeImg from "@public/skills/nodejs.png";
-import reactImg from "@public/skills/react.png";
-import nextjsImg from "@public/skills/nextjs.png";
-import dockerImg from "@public/skills/docker.png";
-import awsImg from "@public/skills/aws.png";
+import cshrapImg from "@public/assets/skills/csharp.png";
+import angularImg from "@public/assets/skills/angular.png";
+import pythonImg from "@public/assets/skills/python.png";
+import phpImg from "@public/assets/skills/php.png";
+import nodeImg from "@public/assets/skills/nodejs.png";
+import reactImg from "@public/assets/skills/react.png";
+import nextjsImg from "@public/assets/skills/nextjs.png";
+import dockerImg from "@public/assets/skills/docker.png";
+import awsImg from "@public/assets/skills/aws.png";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { HR, Tooltip } from "flowbite-react";
