@@ -2,20 +2,22 @@ import "phaser";
 import { BaseScene } from "./BaseScene";
 export class CityScene extends BaseScene {
   platforms: Phaser.Physics.Arcade.StaticGroup;
+  map: Phaser.Tilemaps.Tilemap;
   constructor() {
     super("CityScene");
   }
   preload(): void {}
   create(): void {
-    this.add.image(800, 600, "background");
-    this.add.image(400, 300, "sky");
-    this.platforms = this.physics.add.staticGroup();
+    console.log("CityScene created");
 
-    this.platforms.create(400, 568, "ground").setScale(2).refreshBody();
-
-    this.platforms.create(600, 400, "ground");
-    this.platforms.create(50, 250, "ground");
-    this.platforms.create(750, 220, "ground");
+    this.map = this.make.tilemap({ key: "tilemap-data" });
+    const tiles = this.map.addTilesetImage("tilemap");
+    const layerGround = this.map.createLayer("Ground", tiles!, 0, 0);
+    const layerRoad = this.map.createLayer("Road", tiles!, 0, 0);
+    const layerBuildings = this.map.createLayer("Buildings", tiles!, 0, 0);
+    const layerCarsParking = this.map.createLayer("Cars-parking", tiles!, 0, 0);
+    const layerCars = this.map.createLayer("Cars", tiles!, 0, 0);
+    const layerTrees = this.map.createLayer("Trees", tiles!, 0, 0);
   }
   init(): void {}
   update(): void {}

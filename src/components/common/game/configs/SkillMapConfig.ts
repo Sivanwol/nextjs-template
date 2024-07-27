@@ -16,6 +16,7 @@ const SkillMapConfig: Phaser.Types.Core.GameConfig = {
   dom: {
     createContainer: true,
   },
+  pixelArt: true,
   physics: {
     default: "arcade",
     arcade: {
