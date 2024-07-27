@@ -2,8 +2,8 @@ import "phaser";
 import { BaseScene } from "./BaseScene";
 import packLoader from "./pack.json";
 export class BootScene extends BaseScene {
-  private loadingBar: Phaser.GameObjects.Graphics = this.add.graphics();
-  private progressBar: Phaser.GameObjects.Graphics = this.add.graphics();
+  private loadingBar: Phaser.GameObjects.Graphics;
+  private progressBar: Phaser.GameObjects.Graphics;
 
   constructor() {
     super("BootScene");
@@ -29,6 +29,7 @@ export class BootScene extends BaseScene {
       url: "https://raw.githubusercontent.com/rexrainbow/phaser3-rex-notes/master/dist/rexuiplugin.min.js",
       sceneKey: "rexUI",
     });
+    this.load.baseURL = process.env.NEXT_PUBLIC_ASSETS_URL || "/assets/";
     // @ts-ignore
     this.load.pack("preload", packLoader, "preload");
   }

@@ -8,9 +8,9 @@ const Providers = async ({
 }: Readonly<{
   children: any;
 }>) => {
-  const hypertune = await getHypertune();
-  const serverDehydratedState = hypertune.dehydrate();
-  const serverRootArgs = hypertune.getRootArgs();
+  // const hypertune = await getHypertune();
+  // const serverDehydratedState = hypertune.dehydrate();
+  // const serverRootArgs = hypertune.getRootArgs();
 
   return (
     // <HypertuneProvider

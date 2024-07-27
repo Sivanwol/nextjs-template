@@ -1,0 +1,16 @@
+{
+  "preload": {
+    "files": [
+      {
+        "type": "image",
+        "key": "background",
+        "url": "assets/stage-hp/bg.png"
+      },
+      {
+        "type": "image",
+        "key": "star",
+        "url": "assets/stage-hp/star.png"
+      }
+    ]
+  }
+}

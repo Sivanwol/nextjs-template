@@ -1,19 +1,28 @@
-import { useState, useRef } from "react";
+"use client";
+import { useRef } from "react";
 import { IRefPhaserGame, PhaserGame } from "./PhaserGame";
+import { fetchConfig } from "./configs";
 
-const GameWrapper = ({ config }: { config: Phaser.Types.Core.GameConfig }) => {
-  // The sprite can only be moved in the MainMenu Scene
-  const [canMoveSprite, setCanMoveSprite] = useState(true);
+const GameWrapper = ({
+  config,
+  startScene,
+}: {
+  config: string;
+  startScene: string;
+}) => {
   //  References to the PhaserGame component (game and scene are exposed)
   const phaserRef = useRef<IRefPhaserGame | null>(null);
   // Event emitted from the PhaserGame component
   const currentScene = (scene: Phaser.Scene) => {};
-
+  const configObj = fetchConfig(config);
+  if (!configObj) {
+    throw new Error(`No config found for ${config}`);
+  }
   return (
     <div id="wrapper">
       <PhaserGame
         ref={phaserRef}
-        config={config}
+        config={configObj!}
         currentActiveScene={currentScene}
       />
     </div>

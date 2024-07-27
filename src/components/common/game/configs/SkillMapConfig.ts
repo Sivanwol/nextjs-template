@@ -1,12 +1,7 @@
 import "phaser";
-import { CityScene } from "./Stages/CiteStage";
-import { BootScene } from "./Stages/BootScene";
-
-export function createGame(config: Phaser.Types.Core.GameConfig) {
-  const game = new Phaser.Game(config);
-}
-
-export const SkillMapConfig: Phaser.Types.Core.GameConfig = {
+import { CityScene } from "../Stages/CiteStage";
+import { BootScene } from "../Stages/BootScene";
+const SkillMapConfig: Phaser.Types.Core.GameConfig = {
   type: Phaser.AUTO,
   scale: {
     mode: Phaser.Scale.FIT,
@@ -28,3 +23,4 @@ export const SkillMapConfig: Phaser.Types.Core.GameConfig = {
     },
   },
 };
+export default SkillMapConfig;

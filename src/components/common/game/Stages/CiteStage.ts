@@ -1,7 +1,7 @@
 import "phaser";
 import { BaseScene } from "./BaseScene";
 export class CityScene extends BaseScene {
-  platforms: Phaser.Physics.Arcade.StaticGroup = this.physics.add.staticGroup();
+  platforms: Phaser.Physics.Arcade.StaticGroup;
   constructor() {
     super("CityScene");
   }
