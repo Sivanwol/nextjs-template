@@ -4,12 +4,12 @@
       {
         "type": "image",
         "key": "tilemap",
-        "url": "assets/stage-hp/tilemap.png"
+        "url": "assets/stage-hp/tilemap-TUCUICyOicdMc12DybIOmkBFNCjE3O.png"
       },
       {
         "type": "tilemapTiledJSON",
         "key": "tilemap-data",
-        "url": "assets/stage-hp/tilemap.json"
+        "url": "assets/stage-hp/tilemap-RV40cckE5qrTayDkuGOeM6usl9oNhh.json"
       }
     ]
   }

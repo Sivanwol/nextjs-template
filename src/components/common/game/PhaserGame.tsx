@@ -34,6 +34,7 @@ export const PhaserGame = forwardRef<IRefPhaserGame, IProps>(
       }
       return () => {
         if (game.current) {
+          console.log("destroying game!");
           game.current.destroy(true);
           if (game.current !== null) {
             game.current = null;
