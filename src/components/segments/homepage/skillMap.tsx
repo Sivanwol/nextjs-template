@@ -12,12 +12,12 @@ const GameWrapper = dynamic(
 );
 
 export default function SkillsMap() {
-  const t = useTranslations("homepage");
+  const t = useTranslations("miniGame");
   return (
     <>
       <section className="px-3 sm:px-10 py-5 ml-5 mr-5 sm:py-10 mx-auto text-center mt-5 w-fit">
         <span
-          id="skillsMap"
+          id="minigame"
           style={{
             marginTop: "-10px",
             display: "block",
