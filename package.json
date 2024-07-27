@@ -18,6 +18,7 @@
     "prepare": "husky",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
+    "serve": "./node_modules/.bin/serve -C -l 55667",
     "analyze": "ANALYZE=true yarn build"
   },
   "dependencies": {

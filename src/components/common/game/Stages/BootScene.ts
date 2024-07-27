@@ -24,11 +24,11 @@ export class BootScene extends BaseScene {
       },
       this,
     );
-    this.load.scenePlugin({
-      key: "rexuiplugin",
-      url: "https://raw.githubusercontent.com/rexrainbow/phaser3-rex-notes/master/dist/rexuiplugin.min.js",
-      sceneKey: "rexUI",
-    });
+    // this.load.scenePlugin({
+    //   key: "rexuiplugin",
+    //   url: "https://raw.githubusercontent.com/rexrainbow/phaser3-rex-notes/master/dist/rexuiplugin.min.js",
+    //   sceneKey: "rexUI",
+    // });
     this.load.baseURL = process.env.NEXT_PUBLIC_ASSETS_URL || "/assets/";
     // @ts-ignore
     this.load.pack("preload", packLoader, "preload");

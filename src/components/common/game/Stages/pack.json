@@ -3,13 +3,13 @@
     "files": [
       {
         "type": "image",
-        "key": "background",
-        "url": "assets/stage-hp/bg.png"
+        "key": "tilemap",
+        "url": "assets/stage-hp/tilemap.png"
       },
       {
-        "type": "image",
-        "key": "star",
-        "url": "assets/stage-hp/star.png"
+        "type": "tilemapTiledJSON",
+        "key": "tilemap-data",
+        "url": "assets/stage-hp/tilemap.json"
       }
     ]
   }
