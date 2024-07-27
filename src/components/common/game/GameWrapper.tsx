@@ -8,7 +8,7 @@ const GameWrapper = ({
   startScene,
 }: {
   config: string;
-  startScene: string;
+  startScene?: string;
 }) => {
   //  References to the PhaserGame component (game and scene are exposed)
   const phaserRef = useRef<IRefPhaserGame | null>(null);
@@ -23,6 +23,7 @@ const GameWrapper = ({
       <PhaserGame
         ref={phaserRef}
         config={configObj!}
+        startScene={startScene}
         currentActiveScene={currentScene}
       />
     </div>
