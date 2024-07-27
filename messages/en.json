@@ -26,8 +26,8 @@
   },
   "homepage": {
     "codeTextTitle": "Welcome to DevCo Solutions",
-    "codeTextWhatIAmOffering": "We are a team of experienced developers.\n\r We specialize in creating innovative and user-friendly solutions.\n\r we love to build beautiful and functional web applications.\n\r",
-    "codeTextWhatMyServices": "We specialize in End to end solutions as well cutting custom software solutions based customer needs.",
+    "codeTextWhatIAmOffering": "Hello my name is Sivan Wolberg.\n\r I am specialize in creating innovative and user-friendly solutions.\n\r As well i love to build beautiful and functional web applications.\n\r",
+    "codeTextWhatMyServices": "I am specialize in End to end solutions as well cutting custom software solutions based customer needs.",
     "nextSegment": "My Skills",
     "skillsSegment": {
       "php": "PHP",
@@ -75,6 +75,10 @@
         "submit": "Sent"
       }
     }
+  },
+  "miniGame": {
+    "nextSegment": "Mini Game",
+    "title": "Small Mini game Have Fun!!"
   },
   "footer": {
     "about": "About Us",
