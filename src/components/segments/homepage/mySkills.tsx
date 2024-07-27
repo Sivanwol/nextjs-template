@@ -42,7 +42,7 @@ export default function MySkillsHP() {
               animation="duration-1000"
               style="light"
             >
-              <div className="soft-shadow-slate h-[150] w-[170] hover:soft-shadow-red place-content-center">
+              <div className="soft-shadow-slate h-[150px] w-[170px] hover:soft-shadow-red place-content-center">
                 <div className="flex justify-center">
                   <Image src={cshrapImg} alt={t("skillsSegment.csharp")} />
                 </div>
@@ -54,7 +54,7 @@ export default function MySkillsHP() {
               animation="duration-1000"
               style="light"
             >
-              <div className="soft-shadow-slate h-[150] w-[170] hover:soft-shadow-red place-content-center">
+              <div className="soft-shadow-slate h-[150px] w-[170px] hover:soft-shadow-red place-content-center">
                 <div className="flex justify-center">
                   <Image src={angularImg} alt={t("skillsSegment.angular")} />
                 </div>
@@ -66,7 +66,7 @@ export default function MySkillsHP() {
               animation="duration-1000"
               style="light"
             >
-              <div className="soft-shadow-slate h-[150] w-[170] hover:soft-shadow-red place-content-center">
+              <div className="soft-shadow-slate h-[150px] w-[170px] hover:soft-shadow-red place-content-center">
                 <div className="flex justify-center">
                   <Image src={pythonImg} alt={t("skillsSegment.python")} />
                 </div>
@@ -78,7 +78,7 @@ export default function MySkillsHP() {
               animation="duration-1000"
               style="light"
             >
-              <div className="soft-shadow-slate h-[150] w-[170] hover:soft-shadow-red place-content-center">
+              <div className="soft-shadow-slate h-[150px] w-[170px] hover:soft-shadow-red place-content-center">
                 <div className="flex justify-center">
                   <Image src={nodeImg} alt={t("skillsSegment.node")} />
                 </div>
@@ -90,7 +90,7 @@ export default function MySkillsHP() {
               animation="duration-1000"
               style="light"
             >
-              <div className="soft-shadow-slate h-[150] w-[170] hover:soft-shadow-red place-content-center">
+              <div className="soft-shadow-slate h-[150px] w-[170px] hover:soft-shadow-red place-content-center">
                 <div className="flex justify-center">
                   <Image src={phpImg} alt={t("skillsSegment.php")} />
                 </div>
@@ -102,7 +102,7 @@ export default function MySkillsHP() {
               animation="duration-1000"
               style="light"
             >
-              <div className="soft-shadow-slate h-[150] w-[170] hover:soft-shadow-red place-content-center">
+              <div className="soft-shadow-slate h-[150px] w-[170px] hover:soft-shadow-red place-content-center">
                 <div className="flex justify-center">
                   <Image src={reactImg} alt={t("skillsSegment.react")} />
                 </div>
@@ -114,7 +114,7 @@ export default function MySkillsHP() {
               animation="duration-1000"
               style="light"
             >
-              <div className="soft-shadow-slate h-[150] w-[170] hover:soft-shadow-red hover:soft-shadow-red place-content-center">
+              <div className="soft-shadow-slate h-[150px] w-[170px] hover:soft-shadow-red hover:soft-shadow-red place-content-center">
                 <div className="flex justify-center">
                   <Image src={nextjsImg} alt={t("skillsSegment.nextjs")} />
                 </div>
@@ -126,7 +126,7 @@ export default function MySkillsHP() {
               animation="duration-1000"
               style="light"
             >
-              <div className="soft-shadow-slate h-[150] w-[170] hover:soft-shadow-red place-content-center">
+              <div className="soft-shadow-slate h-[150px] w-[170px] hover:soft-shadow-red place-content-center">
                 <div className="flex justify-center">
                   <Image src={awsImg} alt={t("skillsSegment.aws")} />
                 </div>
@@ -138,7 +138,7 @@ export default function MySkillsHP() {
               animation="duration-1000"
               style="light"
             >
-              <div className="soft-shadow-slate h-[150] w-[170] hover:soft-shadow-red place-content-center">
+              <div className="soft-shadow-slate h-[150px] w-[170px] hover:soft-shadow-red place-content-center">
                 <div className="flex justify-center ">
                   <Image src={dockerImg} alt={t("skillsSegment.docker")} />
                 </div>
