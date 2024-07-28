@@ -23,7 +23,7 @@ export default async function RootLayout({
           <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width" />
         </head>
-        <body className={inter.className}>{children}</body>
+        <body className={inter.className + " w-fit"}>{children}</body>
         <Analytics />
       </html>
     </Providers>
