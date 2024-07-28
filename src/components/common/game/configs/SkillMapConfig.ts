@@ -8,6 +8,10 @@ const SkillMapConfig: Phaser.Types.Core.GameConfig = {
     autoCenter: Phaser.Scale.CENTER_BOTH,
     width: 800,
     height: 600,
+    min: {
+      width: 270,
+      height: 480,
+    },
   },
   scene: [BootScene, CityScene],
   input: {

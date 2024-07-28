@@ -24,7 +24,19 @@ export class CityScene extends BaseScene {
     layerCarsParking?.setScale(2);
     layerCars?.setScale(2);
     layerTrees?.setScale(2);
+    this.scale.on("resize", this.resize, this);
   }
   init(): void {}
   update(): void {}
+  resize(
+    gameSize: { width: any; height: any },
+    baseSize: any,
+    displaySize: any,
+    resolution: any,
+  ) {
+    const width = gameSize.width;
+    const height = gameSize.height;
+
+    this.cameras.resize(width, height);
+  }
 }
