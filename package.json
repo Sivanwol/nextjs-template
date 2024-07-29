@@ -71,7 +71,7 @@
     "clsx": "^2.1.1",
     "date-fns": "^3.6.0",
     "dotenv": "^16.4.1",
-    "drizzle-orm": "^0.30.10",
+    "drizzle-orm": "^0.32.1",
     "flowbite": "1.7.0",
     "flowbite-react": "^0.10.1",
     "framer-motion": "^11.2.3",
