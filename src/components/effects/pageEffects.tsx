@@ -14,7 +14,7 @@ const options: ISourceOptions = {
     color: {
       value: "#fff",
     },
-    opacity: 0.1,
+    opacity: 0.2,
   },
   fpsLimit: 120,
   interactivity: {

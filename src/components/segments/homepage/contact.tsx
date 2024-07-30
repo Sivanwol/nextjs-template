@@ -25,7 +25,7 @@ export default function ContactHP() {
       <div className="flex justify-center">
         <HR.Text
           text={t("contactSegment.nextSegment")}
-          className="w-full text-left md:text-center text-sm font-medium text"
+          className="w-full text-left md:text-center text-md font-bold text"
         />
       </div>
 
