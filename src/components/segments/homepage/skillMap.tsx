@@ -29,7 +29,7 @@ export default function SkillsMap() {
         <div className="flex justify-center">
           <HR.Text
             text={t("nextSegment")}
-            className="w-full text-left md:text-center text-sm font-medium text"
+            className="w-full text-left md:text-center text-md font-bold text"
           />
         </div>
         <div className="flex flex-row items-center md:flex-row justify-between mt-5 gap-y-8r w-4xl">
