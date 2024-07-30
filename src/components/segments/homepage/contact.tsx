@@ -8,12 +8,7 @@ import { useTranslations } from "next-intl";
 // import { ContactFormInitialValues } from "@app/components/common/forms/schemas/contactValidationForm";
 // import { useFormState } from "react-dom";
 import HubspotContactForm from "@app/components/common/forms/hubspotContactForm";
-interface HsFormScriptAttributes
-  extends ScriptHTMLAttributes<HTMLScriptElement> {
-  region: string;
-  portalId: string;
-  formId: string;
-}
+
 export default function ContactHP() {
   const t = useTranslations("homepage");
 
