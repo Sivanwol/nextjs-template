@@ -8,9 +8,9 @@ const HubspotContactForm = () => {
     document.body.appendChild(script);
 
     script.addEventListener("load", () => {
-      // @TS-ignore
+      // @ts-ignore
       if (window.hbspt) {
-        // @TS-ignore
+        // @ts-ignore
         window.hbspt.forms.create({
           region: "eu1",
           portalId: "145137608",
