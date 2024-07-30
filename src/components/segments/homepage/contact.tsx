@@ -1,12 +1,19 @@
+/* eslint-disable @next/next/no-sync-scripts */
 "use client";
 
 import { HR } from "flowbite-react";
 import { useTranslations } from "next-intl";
-import ContactForm from "@app/components/common/forms/contactForm";
-import { sentEmail } from "@app/lib/server/actions/mail";
-import { ContactFormInitialValues } from "@app/components/common/forms/schemas/contactValidationForm";
-import { useFormState } from "react-dom";
-
+// import ContactForm from "@app/components/common/forms/contactForm";
+// import { sentEmail } from "@app/lib/server/actions/mail";
+// import { ContactFormInitialValues } from "@app/components/common/forms/schemas/contactValidationForm";
+// import { useFormState } from "react-dom";
+import HubspotContactForm from "@app/components/common/forms/hubspotContactForm";
+interface HsFormScriptAttributes
+  extends ScriptHTMLAttributes<HTMLScriptElement> {
+  region: string;
+  portalId: string;
+  formId: string;
+}
 export default function ContactHP() {
   const t = useTranslations("homepage");
 
@@ -30,7 +37,9 @@ export default function ContactHP() {
       </div>
 
       <div className="flex flex-row items-center md:flex-row justify-between mt-4 gap-y-8r w-4xl">
-        <ContactForm />
+        {/* <ContactForm /> */}
+
+        <HubspotContactForm />
       </div>
     </section>
   );
