@@ -47,7 +47,11 @@ export default function RootLayout({
             <meta charSet="utf-8" />
             <meta name="viewport" content="width=device-width" />
           </head>
-          <body className={inter.className + "bg-gray-50  dark:bg-gray-800"}>
+          <body
+            className={
+              inter.className + "bg-gray-50  dark:bg-gray-800 w-full h-full"
+            }
+          >
             <Flowbite theme={{ theme: customTheme }}>
               <StyledEngineProvider injectFirst>
                 <FadeInTransition>
