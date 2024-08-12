@@ -74,7 +74,7 @@
     "drizzle-orm": "^0.30.10",
     "flowbite": "1.7.0",
     "flowbite-react": "^0.10.1",
-    "framer-motion": "^11.2.3",
+    "framer-motion": "^11.3.24",
     "hypertune": "^2.3.8",
     "lru-cache": "^11.0.0",
     "lucide-react": "^0.408.0",
