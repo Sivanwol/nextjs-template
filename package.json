@@ -64,7 +64,7 @@
     "@vercel/otel": "^1.9.1",
     "@vercel/postgres": "^0.9.0",
     "autoprefixer": "^10.4.19",
-    "axios": "^1.6.8",
+    "axios": "^1.7.4",
     "bcryptjs": "^2.4.3",
     "bootstrap": "^5.3.3",
     "class-variance-authority": "^0.7.0",
