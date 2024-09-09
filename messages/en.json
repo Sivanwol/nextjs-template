@@ -1,10 +1,84 @@
 {
   "common": {
-    "logo": "Demo Shop",
-    "menuGuest": {
-      "joinNowClient": "",
-      "joinNowDelivery": ""
+    "header": {
+      "brandAlt": "DevCo Site",
+      "brand": "DevCo Solutions"
+    },
+    "languages": {
+      "placeHolder": "Site Language {selectLanguage}",
+      "en": "English",
+      "he": "Hebrew"
+    },
+    "menu": {
+      "myServices": "My Services",
+      "myCV": "My CV",
+      "mywork": "My Work",
+      "contact": "Contact"
+    },
+    "speedDial": {
+      "contacts": "Ways to Contact",
+      "facebook": "Facebook",
+      "whatsup": "Let's Talk",
+      "linkedin": "My Linkedin Profile",
+      "github": "Let see what i build in GitHub as Open Source",
+      "email": "Email"
     }
+  },
+  "homepage": {
+    "codeTextTitle": "Welcome to DevCo Solutions",
+    "codeTextWhatIAmOffering": "Hello my name is Sivan Wolberg.\n\r I am specialize in creating innovative and user-friendly solutions.\n\r As well i love to build beautiful and functional web applications.\n\r",
+    "codeTextWhatMyServices": "I am specialize in End to end solutions as well cutting custom software solutions based customer needs.",
+    "nextSegment": "My Skills",
+    "skillsSegment": {
+      "php": "PHP",
+      "node": "Node.js",
+      "nextjs": "Next.js",
+      "csharp": "C#",
+      "react": "React",
+      "angular": "Angular",
+      "python": "Python",
+      "aws": "AWS",
+      "docker": "Docker"
+    },
+    "contactSegment": {
+      "nextSegment": "Contact Us",
+      "title": "Contact Form",
+      "extraText": "Please fill out the form below and we will get back to you as soon as possible.",
+      "contactForm": {
+        "validations": {
+          "name": "Please enter your name.",
+          "email": "Please enter a valid email address.",
+          "required": "This {fieldName} is required.",
+          "phone": "Please enter a valid phone number.",
+          "subject": "Please enter a subject.",
+          "message": "Please enter a message.",
+          "maxLength": "Please keep the message under {maxLength} characters.",
+          "minLength": "Please enter a message with at least {minLength} characters.",
+          "inputError": "Please fill in all required fields.",
+          "success": "Thank you for your message. We will contact you shortly.",
+          "error": "There was an error sending your message. Please try again later."
+        },
+        "placeHolder": {
+          "name": "Your Name",
+          "email": "Your Email",
+          "phone": "Your Phone",
+          "subject": "Your Subject",
+          "message": "Your Message"
+        },
+        "title": "Contact Us",
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone",
+        "subject": "Subject",
+        "message": "Message",
+        "reset": "Clear",
+        "submit": "Sent"
+      }
+    }
+  },
+  "miniGame": {
+    "nextSegment": "Mini Game",
+    "title": "Small Mini game Have Fun!!"
   },
   "footer": {
     "about": "About Us",
