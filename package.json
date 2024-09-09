@@ -62,7 +62,6 @@
     "flowbite-react": "^0.10.1",
     "formik": "^2.4.6",
     "framer-motion": "^11.2.3",
-    "hypertune": "^2.3.8",
     "lru-cache": "^11.0.0",
     "lucide-react": "^0.408.0",
     "ms": "^2.1.3",
